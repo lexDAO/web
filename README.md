@@ -1,2 +1,2 @@
-# web
-simple website placeholder
+# LexDAO Minimal Lander 
+
