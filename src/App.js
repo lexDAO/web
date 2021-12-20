@@ -10,16 +10,23 @@ import {
   HStack,
   Flex,
   Grid,
-  theme,
 } from '@chakra-ui/react';
 import { FaGithub, FaTwitter, FaDiscord } from 'react-icons/fa';
+import Logo from './assets/logo-white.png';
+import { theme } from '@chakra-ui/react';
+import DarkModeSwitch from './components/DarkModeSwitch';
 
 function App() {
   return (
-    <ChakraProvider theme={theme}>
+    <ChakraProvider resetCSS theme={theme}>
       <Box textAlign="center" fontSize="xl">
-        <Flex m={1} h={16} alignItems={'center'} justifyContent={'space-between'}>
-	  <Box>LOGO</Box>
+        <Flex
+          m={1}
+          h={16}
+          alignItems={'center'}
+          justifyContent={'space-between'}
+        >
+          <Box as="img" src={Logo} alt="lexdao white logo" maxW="3em" />
           <Flex alignItems={'center'} mr={2}>
             <HStack>
               <Text>
@@ -49,25 +56,40 @@ function App() {
                   Governance
                 </Link>
               </Text>
+              <DarkModeSwitch />
             </HStack>
           </Flex>
         </Flex>
-        <Grid minH="85vh" >
+        <Grid minH="85vh">
           <VStack spacing={7} justifyContent={'center'} alignItems={'center'}>
-            <Text as="h1" bgGradient='linear(to-l, #db34ff, #ffe313)' bgClip='text' fontSize="6xl" fontWeight='extrabold'>
+            <Text
+              as="h1"
+              bgGradient="linear(to-l, #db34ff, #ffe313)"
+              bgClip="text"
+              fontSize="6xl"
+              fontWeight="extrabold"
+            >
               LexDAO
             </Text>
             <Text fontSize="2xl">
               Building the next generation of contracts
             </Text>
-	    <HStack gap={2}>
-	  <Link href="https://hackmd.io/@GsLbstMERBi_4-y2X9BKnw/rkoDWGLIF" target="_blank" rel="noopener noreferrer">  
-	  <Button>Join us!</Button>
-	  </Link>
-	  <Link href="https://calendly.com/lexdao/legal-engineering-consultation?month=2021-12" target="_blank" rel="noopener noreferrer">
-	    <Button>Book a Consultation</Button>
-	  </Link>  
-	  </HStack>
+            <HStack gap={2}>
+              <Link
+                href="https://hackmd.io/@GsLbstMERBi_4-y2X9BKnw/rkoDWGLIF"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button>Join us!</Button>
+              </Link>
+              <Link
+                href="https://calendly.com/lexdao/legal-engineering-consultation?month=2021-12"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button>Book a Consultation</Button>
+              </Link>
+            </HStack>
           </VStack>
         </Grid>
         <HStack gap={2} mb={1} alignItems={'center'} justifyContent={'center'}>
