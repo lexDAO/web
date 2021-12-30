@@ -1,5 +1,6 @@
 {
   "name": "web",
+  "homepage": "https://lexdao.github.io/web/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,9 +11,12 @@
     "@testing-library/react": "^10.2.1",
     "@testing-library/user-event": "^12.0.2",
     "framer-motion": "^4.0.0",
+    "gh-pages": "^3.2.3",
+    "hookrouter": "^1.2.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
+    "react-router-dom": "^6.2.1",
     "react-scripts": "4.0.3",
     "web-vitals": "^0.2.2"
   },
@@ -20,7 +24,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
