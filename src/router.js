@@ -4,6 +4,7 @@ import Directory from './components/Directory';
 const routes = {
   '/': () => <Lander />,
   '/web': () => <Lander />,
+  '/web/': () => <Lander />,
   '/directory': () => <Directory />,
 };
 
