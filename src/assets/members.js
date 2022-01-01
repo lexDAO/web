@@ -27,15 +27,6 @@ export const members = [
     contact: 'cryptoxcounselor@gmail.com',
   },
   {
-    name: 'Kate Gibson',
-    description: '2L at Texas Law',
-    jurisdiction: 'Florida',
-    practice:
-      'Startups and capital raising, corporate governance, transactions',
-    link: 'https://www.linkedin.com/in/kate-gibson-74b42bba/',
-    contact: 'kate@akgibson.com, kategibson@utexas.edu',
-  },
-  {
     name: 'Gerald',
     description: 'Healthcare VC, Attorney (DC)',
     jurisdiction: 'DC (active), waiving into WY, NY in 2022',
