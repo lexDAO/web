@@ -27,15 +27,6 @@ export const members = [
     contact: 'cryptoxcounselor@gmail.com',
   },
   {
-    name: 'Gerald',
-    description: 'Healthcare VC, Attorney (DC)',
-    jurisdiction: 'DC (active), waiving into WY, NY in 2022',
-    practice:
-      'Entity formation, investment vehicles, structuring, some fund formation, venture Capital',
-    link: 'http://linkedin.com/in/gerald-gallagher-285040b6',
-    contact: 'Gallaghgsc@gmail.com',
-  },
-  {
     name: 'Mark Dittrich',
     description: '',
     jurisdiction: 'California (partner barred in NY)',
@@ -43,15 +34,6 @@ export const members = [
       'M&A, corporate/outside GC, legal DO formation - partner does corporate tax and T&E',
     link: '',
     contact: '',
-  },
-  {
-    name: 'Andres Dovale',
-    description: 'Andres Dovale - JD 2022',
-    jurisdiction: 'Ontario, Canada - Expected year of call: 2022',
-    practice:
-      'Corporate/Commercial Litigation, Corporate/Commercial Governance, Fintech and IP Law, Significant experience in Ontario civil procedure.',
-    link: 'https://www.linkedin.com/in/andres-dovale/',
-    contact: 'Email: andres.dovaleg@gmail.com; Phone: 416 473 9296',
   },
   {
     name: 'Alex Karana',
@@ -73,30 +55,12 @@ export const members = [
     contact: 'george.dowd@gdowd.law, 312 854-8300',
   },
   {
-    name: 'María',
-    description:
-      'A lawyer from Mexico with over 9 years of experience in IT and intellectual property.',
-    jurisdiction: 'México.',
-    practice: 'Intellectual property, contracts, and corporate law.',
-    link: 'https://www.linkedin.com/in/maría-castillo-b3b592227',
-    contact: 'belecas55@protonmail.com',
-  },
-  {
     name: 'RoberDios',
     description: 'Roberto Peña (RoberDios)',
     jurisdiction: 'Mexico',
     practice: 'Energy, Technology, DAOs',
     link: 'https://github.com/Roberto-Pena',
     contact: 'tadeo1914@gmail.com',
-  },
-  {
-    name: 'Iphie',
-    description:
-      'UK based lawyer interested in Blockchain, Crypto Regulations, Regulatory Law, Smart Contracts, DAOs, Business Strategy, Economic Empowerment of marginalised communities and Social Justice!',
-    jurisdiction: 'United Kingdom - England and Wales',
-    practice: 'Criminal Law, AML/KYC, Regulatory Law, Business Strategy',
-    link: '',
-    contact: 'IphieModu@yahoo.co.uk',
   },
   {
     name: 'Geoff',
