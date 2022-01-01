@@ -4,9 +4,9 @@ export const members = [
     description:
       'Operator, Programmer, Lawyer, Web3 | Threes Brewing, LexDAO, Kickstarter, NYCOO, TeachersPayTeachers',
     jurisdiction: 'New York',
-    practice: 'Corporate',
+    practice: 'General corporate and business operations',
     link: 'https://nycoo.org/',
-    contact: '',
+    contact: 'jaredcohe@gmail.com',
   },
   {
     name: 'Sam Miorelli',
