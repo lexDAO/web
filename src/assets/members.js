@@ -6,7 +6,7 @@ export const members = [
     jurisdiction: 'New York',
     practice: 'General corporate and business operations',
     link: 'https://nycoo.org/',
-    contact: 'jaredcohe@gmail.com',
+    contact: 'jaredcohe@gmail.com, @jaredcohe',
   },
   {
     name: 'Sam Miorelli',
