@@ -3,12 +3,12 @@ import DarkModeSwitch from './DarkModeSwitch';
 import { Flex, Link, Box, HStack, Text } from '@chakra-ui/react';
 import { HIGHLIGHT_COLOR } from '../theme';
 import Logo from '../assets/logo-white.png';
-import { A } from 'hookrouter';
+import { Link as RouterLink } from 'react-router-dom';
 
 function Nav() {
   return (
     <Flex m={1} h={16} alignItems={'center'} justifyContent={'space-between'}>
-      <A href="/">
+      <RouterLink to="/">
         <Box
           borderRadius="3rem"
           as="img"
@@ -17,7 +17,7 @@ function Nav() {
           alt="lexdao white logo"
           maxW="3em"
         />
-      </A>
+      </RouterLink>
 
       <Flex alignItems={'center'} mr={2}>
         <HStack>
@@ -40,9 +40,9 @@ function Nav() {
             </Link>
           </Text>
 
-          <A href="/directory">
+          <RouterLink to="/directory">
             <Text _hover={{ bg: HIGHLIGHT_COLOR }}>Directory</Text>
-          </A>
+          </RouterLink>
 
           <Text _hover={{ bg: HIGHLIGHT_COLOR }}>
             <Link
