@@ -6,5 +6,5 @@ export const members = [
     practice: 'Corporate',
     link: 'https://nycoo.org/',
     contact: 'jaredcohe@gmail.com'
-  }
+  },
 ];
