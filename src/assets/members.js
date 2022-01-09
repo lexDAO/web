@@ -141,7 +141,7 @@ export const members = [
     jurisdiction: "",
     practice: "",
     link: "linktr.ee/chipagosfinest",
-    contact: "i'll provide a better one shortly"
+    contact: ""
   },
   {
     name: "Dennis Cahillane",
@@ -199,4 +199,28 @@ export const members = [
     link: "",
     contact: "ElianaTorres.law@gmail.com"
   },
+  {
+    name: "Jordan",
+    description: "Solidity developer and lawyer specializing in complex litigation and transactional matters",
+    jurisdiction: "Our firm is licensed in SC, AL, GA, CA, and numerous federal courts",
+    practice: "private equity transactions, venture capital, IP, metaverse law, business litigation",
+    link: "https://www.campbellteague.com",
+    contact: "jordan@campbellteague.com"
+  },
+  {
+    name: "George",
+    description: "Veteran litigator and international private equity exec; crypto nerd since 2016; Español and English",
+    jurisdiction: "South Carolina",
+    practice: "business litigation, private equity transactions, venture capital, cross-border issues",
+    link: "http://www.campbellteague.com",
+    contact: "george@campbellteague.com"
+  },
+  {
+    name: "Richard Placido",
+    description: "",
+    jurisdiction: "California",
+    practice: "Business formation, contract drafting, intellectual property licensing, regulatory advising",
+    link: "placidolaw.com",
+    contact: "richard@placidolaw.com"
+  }
 ];
