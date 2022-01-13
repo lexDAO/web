@@ -308,4 +308,14 @@ export const members = [
     link: 'https://djuricic.law',
     contact: 'info@djuricic.law',
   },
+  {
+    name: 'Erich Dylus',
+    description:
+      'Attorney, Legal Ξngineer',
+    jurisdiction: 'District of Columbia, Maryland',
+    practice:
+      'Corporate, Contracts, DAO Entity Wrapping and Ops',
+    link: 'https://github.com/ErichDylus',
+    contact: 'edylus@protonmail.com',
+  },
 ];
