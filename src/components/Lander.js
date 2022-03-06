@@ -22,17 +22,13 @@ function Lander() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button borderRadius="0.6rem" _hover={{ bg: HIGHLIGHT_COLOR }}>
+            <Button
+              borderRadius="0.6rem"
+              p="4xl"
+              size="lg"
+              _hover={{ bg: HIGHLIGHT_COLOR }}
+            >
               Join us!
-            </Button>
-          </Link>
-          <Link
-            href="https://calendly.com/lexdao/legal-engineering-consultation"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button borderRadius="0.6rem" _hover={{ bg: HIGHLIGHT_COLOR }}>
-              Book a Consultation
             </Button>
           </Link>
         </HStack>
