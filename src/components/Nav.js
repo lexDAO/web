@@ -19,7 +19,11 @@ function Nav() {
         />
       </RouterLink>
 
-      <Flex alignItems={'center'} mr={2}>
+      <Flex
+        fontSize={['sm', 'sm', 'md', 'lg', 'lg']}
+        alignItems={'center'}
+        mr={2}
+      >
         <HStack>
           <Text _hover={{ bg: HIGHLIGHT_COLOR }}>
             <Link

@@ -8,7 +8,7 @@ import Directory from './components/Directory';
 
 function App() {
   return (
-    <Box textAlign="center">
+    <Box minHeight="100vh" textAlign="center">
       <Nav />
       <Routes>
         <Route exact path="/" element={<Lander />} />
