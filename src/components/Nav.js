@@ -36,7 +36,7 @@ function Nav() {
           </Text>
           <Text _hover={{ bg: HIGHLIGHT_COLOR }}>
             <Link
-              href="https://discord.gg/lexdao"
+              href="https://discord.gg/QA75Zw4VTZ"
               target="_blank"
               rel="noopener noreferrer"
             >
