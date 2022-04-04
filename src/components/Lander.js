@@ -31,6 +31,21 @@ function Lander() {
               Join us!
             </Button>
           </Link>
+          {/* KALI Calendly Link */}
+          <Link
+            href="https://calendly.com/kalidao/15min"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button
+              borderRadius="0.6rem"
+              p="4xl"
+              size="lg"
+              _hover={{ bg: HIGHLIGHT_COLOR }}
+            >
+              Book a Consultation with KALI
+            </Button>
+          </Link>
         </HStack>
       </VStack>
     </Grid>
