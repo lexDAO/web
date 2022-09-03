@@ -50,7 +50,7 @@ function Nav() {
 
           <Text _hover={{ bg: HIGHLIGHT_COLOR }}>
             <Link
-              href="https://app.daohaus.club/dao/0x64/0x58234d4bf7a83693dc0815d97189ed7d188f6981"
+              href="https://lexdao.discourse.group/"
               target="_blank"
               rel="noopener noreferrer"
             >
