@@ -17,6 +17,7 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0",
     "react-lottie": "^1.2.3",
+    "react-markdown": "^8.0.3",
     "wagmi": "^0.6.6"
   },
   "devDependencies": {

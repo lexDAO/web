@@ -1,5 +1,5 @@
-import type { NextPage } from "next";
-import Layout from "~/layout";
+import type { NextPage } from 'next'
+import Layout from '~/layout'
 
 const Home: NextPage = () => {
   return (
@@ -10,8 +10,8 @@ const Home: NextPage = () => {
           <p className="text-xl md:text-5xl font-bold">the legal engineering guild</p>
         </div>
       </div>
-    </Layout >
-  );
-};
+    </Layout>
+  )
+}
 
-export default Home;
+export default Home

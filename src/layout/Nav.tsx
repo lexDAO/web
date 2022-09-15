@@ -1,9 +1,9 @@
-import Link from "next/link";
-import Item from "./Item";
-import { HiInformationCircle } from "react-icons/hi";
-import { BsCalendar } from "react-icons/bs";
-import { BiHome } from "react-icons/bi";
-import { TbBooks } from "react-icons/tb";
+import Link from 'next/link'
+import Item from './Item'
+import { HiInformationCircle } from 'react-icons/hi'
+import { BsCalendar } from 'react-icons/bs'
+import { BiHome } from 'react-icons/bi'
+import { TbBooks } from 'react-icons/tb'
 
 export default function Nav() {
   return (
@@ -12,5 +12,5 @@ export default function Nav() {
       <Item link="/events" icon={<BsCalendar size={36} />} />
       <Item link="/library" icon={<TbBooks size={36} />} />
     </nav>
-  );
+  )
 }

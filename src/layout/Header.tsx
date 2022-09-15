@@ -1,4 +1,4 @@
-import { ConnectButton } from "@rainbow-me/rainbowkit";
+import { ConnectButton } from '@rainbow-me/rainbowkit'
 
 export default function Header() {
   return (
@@ -6,5 +6,5 @@ export default function Header() {
       <h1 className="text-2xl font-semibold">LexDAO</h1>
       <ConnectButton />
     </div>
-  );
+  )
 }

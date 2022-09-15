@@ -1,16 +1,16 @@
-import Head from "next/head";
-import Footer from "./Footer";
-import Header from "./Header";
-import Nav from "./Nav";
+import Head from 'next/head'
+import Footer from './Footer'
+import Header from './Header'
+import Nav from './Nav'
 
 type LayoutProps = {
-  heading: string;
-  content: string;
-  children: React.ReactNode;
-};
+  heading: string
+  content: string
+  children: React.ReactNode
+}
 
 export default function Layout({ heading, content, children }: LayoutProps) {
-  const title = "LexDAO - " + heading;
+  const title = 'LexDAO - ' + heading
 
   return (
     <>
@@ -26,5 +26,5 @@ export default function Layout({ heading, content, children }: LayoutProps) {
         <Footer />
       </div>
     </>
-  );
+  )
 }
