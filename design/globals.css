@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+h1 {
+    font-family: "Playfair-Display", serif;
+    font-weight: 600;
+}
+
+body { 
+    font-family: "Playfair Display", serif; 
+    font-weight: 400;
+}
+  
+@supports (font-variation-settings: normal) {
+    h1 {
+        font-family: "Playfair-Display", serif;
+        font-variation-settings: "wght" 600;
+    }
+    body { 
+        font-family: "Playfair Display", serif; 
+        font-variation-settings: "wght" 400;
+    }
+}
+  

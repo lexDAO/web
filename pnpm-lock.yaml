@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@fontsource/playfair-display': ^4.5.11
   '@heroicons/react': ^2.0.11
   '@rainbow-me/rainbowkit': ^0.5.3
   '@tailwindcss/forms': ^0.5.3
@@ -25,6 +26,7 @@ specifiers:
   wagmi: ^0.6.6
 
 dependencies:
+  '@fontsource/playfair-display': 4.5.11
   '@heroicons/react': 2.0.11_react@18.2.0
   '@rainbow-me/rainbowkit': 0.5.3_77hisva6i3lzqozyotowjactue
   ethers: 5.7.1
@@ -514,6 +516,10 @@ packages:
       '@ethersproject/logger': 5.7.0
       '@ethersproject/properties': 5.7.0
       '@ethersproject/strings': 5.7.0
+    dev: false
+
+  /@fontsource/playfair-display/4.5.11:
+    resolution: {integrity: sha512-U9mhWeTBKmxebeaNxZT/38Wux1AA3eXOqsngdzuk2uH/uyykpS6YX11RvNCk4Pg/1IL6LAqgZh7JWS7TVFAdnA==}
     dev: false
 
   /@heroicons/react/2.0.11_react@18.2.0:

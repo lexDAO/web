@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState } from 'react'
 
 export default function JoinForm() {
   const [isLawyer, setIsLawyer] = useState(false)
@@ -13,12 +13,10 @@ export default function JoinForm() {
       <input type="email" placeholder="Email" className="rounded-xl" />
       <input type="text" placeholder="Discord" className="rounded-xl" />
       <div className="flex flex-row align-center">
-        <label className="">
-          Are you a lawyer?
-        </label>
+        <label className="">Are you a lawyer?</label>
         <input type="checkbox" className="rounded-full m-1" onChangeCapture={() => setIsLawyer(!isLawyer)} />
       </div>
-      {isLawyer && <input type='text' placeholder="Practice Area" className="rounded-xl" />}
+      {isLawyer && <input type="text" placeholder="Practice Area" className="rounded-xl" />}
       <span>These fields are not required but will make it easier for us to communicate with you.</span>
       <button type="submit" className="p-2 rounded-xl bg-brand-50 hover:bg-brand-100 focus:ring-brand-200 outline-none">
         Mint!

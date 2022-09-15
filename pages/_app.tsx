@@ -6,6 +6,9 @@ import { chain, configureChains, createClient, WagmiConfig } from 'wagmi'
 import { infuraProvider } from 'wagmi/providers/infura'
 import { publicProvider } from 'wagmi/providers/public'
 
+import '@fontsource/playfair-display/variable.css'
+import '@fontsource/playfair-display/variable-italic.css'
+
 const { chains, provider } = configureChains(
   [chain.mainnet],
   [infuraProvider({ apiKey: process.env.ALCHEMY_ID }), publicProvider()],

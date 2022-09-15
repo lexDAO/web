@@ -10,6 +10,7 @@
     "format": "prettier --write \"**/*.{ts,tsx}\""
   },
   "dependencies": {
+    "@fontsource/playfair-display": "^4.5.11",
     "@heroicons/react": "^2.0.11",
     "@rainbow-me/rainbowkit": "^0.5.3",
     "ethers": "^5.7.1",
