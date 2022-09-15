@@ -9,7 +9,7 @@ const Join: NextPage = () => {
         <div className="w-1/2 p-20 flex flex-col align-center justify-center space-y-3">
           <h1 className="text-6xl md:text-9xl font-extrabold">LexDAO</h1>
           <p className="text-xl md:text-5xl font-bold">upgrading the legal tradition.</p>
-          <p className="text-xl md:text-5xl font-bold text-brand-100">together.</p>
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noreferrer" className="text-xl md:text-5xl font-bold text-brand-900 hover:text-brand-800">together.</a>
         </div>
         <JoinForm />
       </div>
