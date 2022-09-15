@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Footer from "./Footer";
 import Header from "./Header";
 import Nav from "./Nav";
 
@@ -12,15 +13,18 @@ export default function Layout({ heading, content, children }: LayoutProps) {
   const title = "LexDAO - " + heading;
 
   return (
-    <div className="relative min-h-screen flex flex-col space-between align-center">
+    <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={content} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
-      {children}
-      <Nav />
-    </div>
+      <div className="relative min-h-screen flex flex-col space-between align-center">
+        <Header />
+        {children}
+        <Nav />
+        <Footer />
+      </div>
+    </>
   );
 }
