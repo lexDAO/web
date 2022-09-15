@@ -13,10 +13,10 @@ export default function JoinForm() {
       <input type="email" placeholder="Email" className="rounded-xl" />
       <input type="text" placeholder="Discord" className="rounded-xl" />
       <div className="flex flex-row align-center">
-        <label className="flex flex-row align-center">
+        <label className="">
           Are you a lawyer?
         </label>
-        <input type="checkbox" className="rounded-full" onChangeCapture={() => setIsLawyer(!isLawyer)} />
+        <input type="checkbox" className="rounded-full m-1" onChangeCapture={() => setIsLawyer(!isLawyer)} />
       </div>
       {isLawyer && <input type='text' placeholder="Practice Area" className="rounded-xl" />}
       <span>These fields are not required but will make it easier for us to communicate with you.</span>
