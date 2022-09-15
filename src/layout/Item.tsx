@@ -9,7 +9,7 @@ type Props = {
 export default function Home({ link, icon, isExternal }: Props) {
   if (isExternal === true)
     return (
-      <a href={link} target="_blank">
+      <a href={link} target="_blank" rel="noopenner">
         {icon}
       </a>
     )
