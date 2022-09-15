@@ -7,8 +7,10 @@ export default function JoinForm() {
       <p className="text-md font-medium">
         This will generate a NFT on Ethereum. It will allow you to access exclusive token-gated content and discussions.
       </p>
-      <label htmlFor="name" className="italic">What should we call you?</label>
-      <input type="text" name="name" id="name" className="border-bottom-1 border-brand-200" autoFocus/>
+      <label htmlFor="name" className="italic">
+        What should we call you?
+      </label>
+      <input type="text" name="name" id="name" className="border-bottom-1 border-brand-200" autoFocus />
       <button type="submit" className="p-2 rounded-xl bg-brand-50 hover:bg-brand-100 focus:ring-brand-200 outline-none">
         Mint!
       </button>
