@@ -2,13 +2,14 @@ import '@design/globals.css'
 import type { AppProps } from 'next/app'
 import NextNProgress from "nextjs-progressbar";
 import '@rainbow-me/rainbowkit/styles.css'
-import { getDefaultWallets, RainbowKitProvider, lightTheme } from '@rainbow-me/rainbowkit'
+import { getDefaultWallets, RainbowKitProvider, lightTheme, darkTheme } from '@rainbow-me/rainbowkit'
 import { chain, configureChains, createClient, WagmiConfig } from 'wagmi'
 import { infuraProvider } from 'wagmi/providers/infura'
 import { publicProvider } from 'wagmi/providers/public'
 
 import '@fontsource/playfair-display/variable.css'
 import '@fontsource/playfair-display/variable-italic.css'
+import { ThemeOptions } from '@rainbow-me/rainbowkit/dist/themes/baseTheme';
 
 const { chains, provider } = configureChains(
   [chain.mainnet],
@@ -26,25 +27,36 @@ const wagmiClient = createClient({
 })
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const theme: ThemeOptions = {
+    borderRadius: 'none',
+    fontStack: 'system',
+    overlayBlur: 'large',
+  }
+
   return (
     <WagmiConfig client={wagmiClient}>
       <RainbowKitProvider
         chains={chains}
         modalSize="compact"
-        theme={lightTheme({
-          accentColor: '#8e4ec6',
-          accentColorForeground: '#f9f1fe',
-          borderRadius: 'none',
-          fontStack: 'system',
-          overlayBlur: 'large',
-        })}
+        theme={{
+          lightMode: lightTheme({
+            ...theme,
+            accentColor: '#8e4ec6',
+            accentColorForeground: '#f9f1fe',
+          }),
+          darkMode: darkTheme({
+            ...theme,
+            accentColor: '#eddbf9',
+            accentColorForeground: '#2b0e44',
+          }),
+        }}
       >
         <NextNProgress
           color="#be93e4"
         />
         <Component {...pageProps} />
       </RainbowKitProvider>
-    </WagmiConfig>
+    </WagmiConfig >
   )
 }
 
