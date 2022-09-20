@@ -1,5 +1,6 @@
 import '@design/globals.css'
 import type { AppProps } from 'next/app'
+import NextNProgress from "nextjs-progressbar";
 import '@rainbow-me/rainbowkit/styles.css'
 import { getDefaultWallets, RainbowKitProvider, lightTheme } from '@rainbow-me/rainbowkit'
 import { chain, configureChains, createClient, WagmiConfig } from 'wagmi'
@@ -38,6 +39,9 @@ function MyApp({ Component, pageProps }: AppProps) {
           overlayBlur: 'large',
         })}
       >
+        <NextNProgress
+          color="#be93e4"
+        />
         <Component {...pageProps} />
       </RainbowKitProvider>
     </WagmiConfig>

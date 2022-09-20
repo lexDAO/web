@@ -19,7 +19,7 @@ export default function Layout({ heading, content, children }: LayoutProps) {
         <meta name="description" content={content} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="relative min-h-screen flex flex-col space-between align-center">
+      <div className="bg-white dark:bg-black relative min-h-screen flex flex-col space-between align-center">
         <Header />
         {children}
         <Nav />

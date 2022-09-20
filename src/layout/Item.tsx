@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Lottie from 'react-lottie'
 
 type Props = {
   link: string
@@ -7,7 +6,7 @@ type Props = {
   isExternal?: Boolean
 }
 export default function Home({ link, label, isExternal }: Props) {
-  const linkStyle = 'w-full px-3 py-1 hover:bg-brand-100'
+  const linkStyle = 'w-full px-3 py-1 hover:bg-brand-800 hover:dark:bg-brand-200'
 
   if (isExternal === true)
     return (
