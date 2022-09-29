@@ -11,16 +11,14 @@
   },
   "dependencies": {
     "@fontsource/playfair-display": "^4.5.11",
-    "@heroicons/react": "^2.0.11",
-    "@rainbow-me/rainbowkit": "^0.5.3",
+    "@kalidao/reality": "^0.0.5",
+    "connectkit": "^0.0.2",
     "ethers": "^5.7.1",
     "next": "12.3.0",
     "nextjs-progressbar": "^0.0.14",
     "react-dom": "18.2.0",
-    "react-icons": "^4.4.0",
-    "react-lottie": "^1.2.3",
     "react-markdown": "^8.0.3",
-    "wagmi": "^0.6.6"
+    "wagmi": "^0.6.7"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.3",

@@ -1,62 +1,51 @@
 import '@design/globals.css'
 import type { AppProps } from 'next/app'
-import NextNProgress from "nextjs-progressbar";
-import '@rainbow-me/rainbowkit/styles.css'
-import { getDefaultWallets, RainbowKitProvider, lightTheme, darkTheme } from '@rainbow-me/rainbowkit'
-import { chain, configureChains, createClient, WagmiConfig } from 'wagmi'
-import { infuraProvider } from 'wagmi/providers/infura'
-import { publicProvider } from 'wagmi/providers/public'
+import NextNProgress from 'nextjs-progressbar'
+import { WagmiConfig, createClient, chain } from 'wagmi'
+import { ConnectKitProvider, getDefaultClient } from 'connectkit'
 
 import '@fontsource/playfair-display/variable.css'
 import '@fontsource/playfair-display/variable-italic.css'
-import { ThemeOptions } from '@rainbow-me/rainbowkit/dist/themes/baseTheme';
 
-const { chains, provider } = configureChains(
-  [chain.mainnet],
-  [infuraProvider({ apiKey: process.env.ALCHEMY_ID }), publicProvider()],
+const alchemyId = process.env.ALCHEMY_ID
+const chains = [chain.mainnet, chain.goerli]
+
+const wagmiClient = createClient(
+  getDefaultClient({
+    appName: 'Your App Name',
+    alchemyId,
+    chains,
+  }),
 )
-const { connectors } = getDefaultWallets({
-  appName: 'LexDAO',
-  chains,
-})
-
-const wagmiClient = createClient({
-  autoConnect: true,
-  connectors,
-  provider,
-})
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const theme: ThemeOptions = {
-    borderRadius: 'none',
-    fontStack: 'system',
-    overlayBlur: 'large',
-  }
-
   return (
     <WagmiConfig client={wagmiClient}>
-      <RainbowKitProvider
-        chains={chains}
-        modalSize="compact"
-        theme={{
-          lightMode: lightTheme({
-            ...theme,
-            accentColor: '#8e4ec6',
-            accentColorForeground: '#f9f1fe',
-          }),
-          darkMode: darkTheme({
-            ...theme,
-            accentColor: '#eddbf9',
-            accentColorForeground: '#2b0e44',
-          }),
+      <ConnectKitProvider
+        mode="auto"
+        customTheme={{
+          '--ck-connectbutton-border-radius': '0.5rem',
+        }}
+        options={{
+          embedGoogleFonts: true,
+          disclaimer: (
+            <>
+              By connecting your wallet you agree to our{' '}
+              <a target="_blank" rel="noopener noreferrer" href="/terms">
+                Terms of Service
+              </a>{' '}
+              and{' '}
+              <a target="_blank" rel="noopener noreferrer" href="/privacy">
+                Privacy Policy
+              </a>
+            </>
+          ),
         }}
       >
-        <NextNProgress
-          color="#be93e4"
-        />
+        <NextNProgress color="#be93e4" />
         <Component {...pageProps} />
-      </RainbowKitProvider>
-    </WagmiConfig >
+      </ConnectKitProvider>
+    </WagmiConfig>
   )
 }
 
