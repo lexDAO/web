@@ -25,6 +25,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         mode="auto"
         customTheme={{
           '--ck-connectbutton-border-radius': '0.5rem',
+          '--ck-font-family': '"Playfair Display", serif',
         }}
         options={{
           embedGoogleFonts: true,

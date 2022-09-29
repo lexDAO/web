@@ -17,9 +17,9 @@ export default function JoinForm() {
       />
       <button
         type="submit"
-        className="p-2 rounded-xl bg-brand-50 dark:bg-brand-900 hover:bg-brand-100 hover:dark:bg-brand-900 focus:ring-brand-200 focus:dark:ring-brand-800 outline-none"
+        className="transition-transform duration-300 ease-in hover:scale-105 p-2 rounded-xl bg-brand-50 dark:bg-brand-900 hover:bg-brand-100 hover:dark:bg-brand-900 focus:ring-brand-200 focus:dark:ring-brand-800 outline-none"
       >
-        Mint!
+        Submit.
       </button>
     </form>
   )
