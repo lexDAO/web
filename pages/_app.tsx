@@ -1,53 +1,75 @@
 import '@design/globals.css'
 import type { AppProps } from 'next/app'
+import { Session } from "next-auth";
+import { SessionProvider } from "next-auth/react";
 import NextNProgress from 'nextjs-progressbar'
-import { WagmiConfig, createClient, chain } from 'wagmi'
-import { ConnectKitProvider, getDefaultClient } from 'connectkit'
+import { chain, configureChains, createClient, WagmiConfig } from 'wagmi'
+import { alchemyProvider } from 'wagmi/providers/alchemy'
+import { publicProvider } from 'wagmi/providers/public'
+import '@rainbow-me/rainbowkit/styles.css'
+import { getDefaultWallets, RainbowKitProvider, DisclaimerComponent, lightTheme } from '@rainbow-me/rainbowkit'
+import { RainbowKitSiweNextAuthProvider, GetSiweMessageOptions } from '@rainbow-me/rainbowkit-siwe-next-auth'
 
 import '@fontsource/playfair-display/variable.css'
 import '@fontsource/playfair-display/variable-italic.css'
 
-const alchemyId = process.env.ALCHEMY_ID
-const chains = [chain.mainnet, chain.goerli]
-
-const wagmiClient = createClient(
-  getDefaultClient({
-    appName: 'Your App Name',
-    alchemyId,
-    chains,
-  }),
+const { chains, provider } = configureChains(
+  [chain.mainnet, chain.polygon, chain.optimism, chain.arbitrum],
+  [alchemyProvider({ apiKey: process.env.ALCHEMY_ID ?? '' }), publicProvider()],
 )
 
-function MyApp({ Component, pageProps }: AppProps) {
+const { connectors } = getDefaultWallets({
+  appName: 'LexDAO',
+  chains,
+})
+
+const wagmiClient = createClient({
+  autoConnect: true,
+  connectors,
+  provider,
+})
+
+const Disclaimer: DisclaimerComponent = ({ Text, Link }) => (
+  <Text>
+    By connecting your wallet, you agree to the <Link href="/terms">Terms of Service</Link> and acknowledge you have
+    read and understand the <Link href="/privacy">Privacy Policy</Link>.
+  </Text>
+)
+
+const getSiweMessageOptions: GetSiweMessageOptions = () => ({
+  statement: 'By signing this message you agree to our Terms of Service and Privacy Policy.',
+})
+
+function App({ Component, pageProps }: AppProps<{
+  session: Session;
+}>) {
   return (
     <WagmiConfig client={wagmiClient}>
-      <ConnectKitProvider
-        mode="auto"
-        customTheme={{
-          '--ck-connectbutton-border-radius': '0.5rem',
-          '--ck-font-family': '"Playfair Display", serif',
-        }}
-        options={{
-          embedGoogleFonts: true,
-          disclaimer: (
-            <>
-              By connecting your wallet you agree to our{' '}
-              <a target="_blank" rel="noopener noreferrer" href="/terms">
-                Terms of Service
-              </a>{' '}
-              and{' '}
-              <a target="_blank" rel="noopener noreferrer" href="/privacy">
-                Privacy Policy
-              </a>
-            </>
-          ),
-        }}
-      >
-        <NextNProgress color="#be93e4" />
-        <Component {...pageProps} />
-      </ConnectKitProvider>
+      <SessionProvider refetchInterval={0} session={pageProps.session}>
+        <RainbowKitSiweNextAuthProvider getSiweMessageOptions={getSiweMessageOptions}>
+          <RainbowKitProvider
+            chains={chains}
+            modalSize="compact"
+            appInfo={{
+              appName: 'LexDAO',
+              learnMoreUrl: '/about',
+              disclaimer: Disclaimer,
+            }}
+            theme={lightTheme({
+              accentColor: '#7b3fe4',
+              accentColorForeground: 'white',
+              borderRadius: 'small',
+              fontStack: 'system',
+              overlayBlur: 'small',
+            })}
+          >
+            <NextNProgress color="#be93e4" />
+            <Component {...pageProps} />
+          </RainbowKitProvider>
+        </RainbowKitSiweNextAuthProvider>
+      </SessionProvider>
     </WagmiConfig>
   )
 }
 
-export default MyApp
+export default App
