@@ -19,14 +19,9 @@ const Join: NextPage = () => {
             </a>
           </h1>
           <p className="text-xl md:text-5xl font-bold">upgrading the legal tradition.</p>
-          <a
-            href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-            target="_blank"
-            rel="noreferrer"
-            className="text-xl md:text-5xl font-bold text-brand-900 hover:text-brand-800 dark:text-brand-50 hover:dark:text-brand-100"
-          >
+          <p className="text-xl md:text-5xl font-bold text-brand-900 hover:text-brand-800 dark:text-brand-50 hover:dark:text-brand-100">
             together.
-          </a>
+          </p>
         </div>
         <JoinForm />
       </div>
