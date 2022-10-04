@@ -14,7 +14,7 @@ import '@fontsource/playfair-display/variable.css'
 import '@fontsource/playfair-display/variable-italic.css'
 
 const { chains, provider } = configureChains(
-  [chain.mainnet, chain.polygon, chain.optimism, chain.arbitrum],
+  [chain.mainnet],
   [alchemyProvider({ apiKey: process.env.NEXT_PUBLIC_ALCHEMY_ID ?? '' }), publicProvider()],
 )
 
