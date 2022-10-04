@@ -1,7 +1,7 @@
 import '@design/globals.css'
 import type { AppProps } from 'next/app'
-import { Session } from "next-auth";
-import { SessionProvider } from "next-auth/react";
+import { Session } from 'next-auth'
+import { SessionProvider } from 'next-auth/react'
 import NextNProgress from 'nextjs-progressbar'
 import { chain, configureChains, createClient, WagmiConfig } from 'wagmi'
 import { alchemyProvider } from 'wagmi/providers/alchemy'
@@ -40,8 +40,11 @@ const getSiweMessageOptions: GetSiweMessageOptions = () => ({
   statement: 'By signing this message you agree to our Terms of Service and Privacy Policy.',
 })
 
-function App({ Component, pageProps }: AppProps<{
-  session: Session;
+function App({
+  Component,
+  pageProps,
+}: AppProps<{
+  session: Session
 }>) {
   return (
     <WagmiConfig client={wagmiClient}>
