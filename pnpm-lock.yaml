@@ -5,6 +5,8 @@ specifiers:
   '@kalidao/reality': ^0.0.5
   '@rainbow-me/rainbowkit': ^0.7.0
   '@rainbow-me/rainbowkit-siwe-next-auth': ^0.1.4
+  '@splinetool/react-spline': ^2.2.3
+  '@splinetool/runtime': ^0.9.116
   '@tailwindcss/forms': ^0.5.3
   '@types/node': 18.7.18
   '@types/react': 18.0.20
@@ -33,6 +35,8 @@ dependencies:
   '@kalidao/reality': 0.0.5_react-dom@18.2.0+react@18.2.0
   '@rainbow-me/rainbowkit': 0.7.0_00a72e91bd5d8068f1015853be34afd2
   '@rainbow-me/rainbowkit-siwe-next-auth': 0.1.4_07f96be9bd3cc6b3618506cce80de641
+  '@splinetool/react-spline': 2.2.3_55e246b4b49f7ca7f6de7dbd2292ab14
+  '@splinetool/runtime': 0.9.116
   ethers: 5.7.1
   next: 12.3.0_react-dom@18.2.0+react@18.2.0
   next-auth: 4.12.2_16ced270f64fb870fe6e2a0c3d86aa4a
@@ -830,6 +834,25 @@ packages:
       - encoding
       - react-native
       - utf-8-validate
+    dev: false
+
+  /@splinetool/react-spline/2.2.3_55e246b4b49f7ca7f6de7dbd2292ab14:
+    resolution: {integrity: sha512-KdvyP2cCLLG/PcHp0ObE147nhawY4R/iqI6733MSWBx4KSpeo4oD589rCPuXeGdgyr2lCtZqUQOkQj4QCnXxmw==}
+    peerDependencies:
+      '@splinetool/runtime': '*'
+      react: '>=17.0.0'
+      react-dom: '>=17.0.0'
+    dependencies:
+      '@splinetool/runtime': 0.9.116
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      react-merge-refs: 1.1.0
+    dev: false
+
+  /@splinetool/runtime/0.9.116:
+    resolution: {integrity: sha512-yFoyAE0sa+43tJtg1mjDgLdIGn4SD1LvYYHmmiMWlmYKuueN1auqNtzML+nFZfy3ykNR+v9Ng8/PEHtylDjVYA==}
+    dependencies:
+      on-change: 4.0.1
     dev: false
 
   /@spruceid/siwe-parser/1.1.3:
@@ -3855,6 +3878,11 @@ packages:
     engines: {node: ^10.13.0 || >=12.0.0}
     dev: false
 
+  /on-change/4.0.1:
+    resolution: {integrity: sha512-Gxmr/8NsLTigoUUEPvnAIUGl7uxwfC3Mm1G+qTmODEZcT4ZGfeaFyQgfGCdbKVS2pICIFYB82RH6MUHToPcS4Q==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dev: false
+
   /once/1.4.0:
     resolution: {integrity: sha512-lNaJgI+2Q5URQBkccEKHTQOPaXdUxnZZElQTZY0MFUAuaEqe1E+Nyvgdz/aIyNi6Z9MzO5dv1H8n58/GELp3+w==}
     dependencies:
@@ -4228,6 +4256,10 @@ packages:
       vfile: 5.3.5
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  /react-merge-refs/1.1.0:
+    resolution: {integrity: sha512-alTKsjEL0dKH/ru1Iyn7vliS2QRcBp9zZPGoWxUOvRGWPUYgjo+V01is7p04It6KhgrzhJGnIj9GgX8W4bZoCQ==}
     dev: false
 
   /react-native-url-polyfill/1.3.0:

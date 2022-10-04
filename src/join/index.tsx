@@ -46,8 +46,8 @@ export default function JoinForm() {
             <div className="flex flex-col ml-2 text-sm">
               <span className="font-medium text-gray-900 dark:text-gray-300">Capital</span>
               <span id="capital-helper-text" className="text-xs font-normal text-gray-500 dark:text-gray-300">
-                Pay 300 USDC/DAI as membership dues. This will be refunded if you're not accepted as a member by the
-                guild.
+                Pay 300 USDC/DAI as membership dues. This will be refunded if you&apos;re not accepted as a member by
+                the guild.
               </span>
             </div>
           </label>
