@@ -3,6 +3,7 @@ import type { AppProps } from 'next/app'
 import { Session } from 'next-auth'
 import { SessionProvider } from 'next-auth/react'
 import NextNProgress from 'nextjs-progressbar'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { chain, configureChains, createClient, WagmiConfig } from 'wagmi'
 import { alchemyProvider } from 'wagmi/providers/alchemy'
 import { publicProvider } from 'wagmi/providers/public'
@@ -28,6 +29,8 @@ const wagmiClient = createClient({
   connectors,
   provider,
 })
+
+const reactQueryClient = new QueryClient()
 
 const Disclaimer: DisclaimerComponent = ({ Text, Link }) => (
   <Text>
@@ -66,7 +69,9 @@ function App({
               overlayBlur: 'small',
             })}
           >
-            <NextNProgress color="#be93e4" />
+            <QueryClientProvider client={reactQueryClient}>
+              <NextNProgress color="#be93e4" />
+            </QueryClientProvider>
             <Component {...pageProps} />
           </RainbowKitProvider>
         </RainbowKitSiweNextAuthProvider>

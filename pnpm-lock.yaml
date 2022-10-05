@@ -8,6 +8,7 @@ specifiers:
   '@splinetool/react-spline': ^2.2.3
   '@splinetool/runtime': ^0.9.116
   '@tailwindcss/forms': ^0.5.3
+  '@tanstack/react-query': ^4.10.1
   '@types/node': 18.7.18
   '@types/react': 18.0.20
   '@types/react-dom': 18.0.6
@@ -37,6 +38,7 @@ dependencies:
   '@rainbow-me/rainbowkit-siwe-next-auth': 0.1.4_07f96be9bd3cc6b3618506cce80de641
   '@splinetool/react-spline': 2.2.3_55e246b4b49f7ca7f6de7dbd2292ab14
   '@splinetool/runtime': 0.9.116
+  '@tanstack/react-query': 4.10.1_react-dom@18.2.0+react@18.2.0
   ethers: 5.7.1
   next: 12.3.0_react-dom@18.2.0+react@18.2.0
   next-auth: 4.12.2_16ced270f64fb870fe6e2a0c3d86aa4a
@@ -897,6 +899,10 @@ packages:
       tailwindcss: 3.1.8
     dev: true
 
+  /@tanstack/query-core/4.10.1:
+    resolution: {integrity: sha512-UZRYzjgQSfYhQ+cJX0CspAbzutf8p93gR1xFjQuH3OYcb/7t3WnHkdb/qC9mbqrfWXN/JAbBTJlTU/XQHc5HbA==}
+    dev: false
+
   /@tanstack/query-core/4.3.4:
     resolution: {integrity: sha512-NLAe3j5Vk1yYEtoPP5fPGPjRzkZPx67KUM3f14L3InziJZJ0wVecCh7uKfgYkbRKJSeq6PlbND7iuCGdTplN6Q==}
     dev: false
@@ -920,6 +926,24 @@ packages:
       - react
       - react-dom
       - react-native
+    dev: false
+
+  /@tanstack/react-query/4.10.1_react-dom@18.2.0+react@18.2.0:
+    resolution: {integrity: sha512-6GaLYAsAu/4aX6HR4krpOej9qbKWXe0X0eccikpv5hAw4CoAAPG29Pydql1nTl9cYF2zd21unVm4yApklFY0AA==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-native: '*'
+    peerDependenciesMeta:
+      react-dom:
+        optional: true
+      react-native:
+        optional: true
+    dependencies:
+      '@tanstack/query-core': 4.10.1
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      use-sync-external-store: 1.2.0_react@18.2.0
     dev: false
 
   /@tanstack/react-query/4.3.4_react-dom@18.2.0+react@18.2.0:
@@ -5017,7 +5041,7 @@ packages:
     dependencies:
       '@coinbase/wallet-sdk': 3.5.2
       '@tanstack/query-sync-storage-persister': 4.3.4_react-dom@18.2.0+react@18.2.0
-      '@tanstack/react-query': 4.3.4_react-dom@18.2.0+react@18.2.0
+      '@tanstack/react-query': 4.10.1_react-dom@18.2.0+react@18.2.0
       '@tanstack/react-query-persist-client': 4.3.4_react-dom@18.2.0+react@18.2.0
       '@wagmi/core': 0.5.7_995163ce57606995c86665515194a021
       '@walletconnect/ethereum-provider': 1.8.0
