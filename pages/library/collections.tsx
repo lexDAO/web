@@ -2,13 +2,12 @@ import type { NextPage } from 'next'
 import Layout from '~/layout'
 
 
-const Events: NextPage = () => {
+const Collections: NextPage = () => {
   return (
     <Layout heading="Home" content="Homepage of the legal engineering guild.">
-      <h1 className="text-3xl font-bold underline text-white">Events</h1>
-   
+      <h1 className="text-3xl font-bold underline text-white">Collections inside Libarary</h1>
     </Layout>
   )
 }
 
-export default Events
+export default Collections

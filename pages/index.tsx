@@ -1,8 +1,15 @@
 import type { NextPage } from 'next'
 import Link from 'next/link'
 import Layout from '~/layout'
+import { GetStaticProps} from 'next'
+import { type } from 'os'
+import { InferGetStaticPropsType } from 'next'
+
+
+
 
 const Home: NextPage = () => {
+
   return (
     <Layout heading="Home" content="Homepage of the legal engineering guild.">
       <div className="flex flex-col items-center justify-center h-screen">
@@ -17,9 +24,10 @@ const Home: NextPage = () => {
             >
               DAO
             </a>
+           
           </h1>
-          <p className="text-xl md:text-5xl font-bold">Upgrading the legal tradition.</p>
-          <p className="text-xl md:text-5xl font-bold">Together.</p>
+          <p className="text-xl md:text-5xl font-bold text-white">Upgrading the legal tradition.</p>
+          <p className="text-xl md:text-5xl font-bold text-white">Together.</p>
         </div>
       </div>
     </Layout>
