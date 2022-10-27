@@ -7,17 +7,24 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write \"**/*.{ts,tsx}\""
+    "format": "prettier --write \"**/*.{ts,tsx}\"",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@fontsource/playfair-display": "^4.5.11",
     "@kalidao/reality": "^0.0.5",
-    "connectkit": "^0.0.2",
+    "@rainbow-me/rainbowkit": "^0.7.0",
+    "@rainbow-me/rainbowkit-siwe-next-auth": "^0.1.4",
+    "@splinetool/react-spline": "^2.2.3",
+    "@splinetool/runtime": "^0.9.116",
+    "@tanstack/react-query": "^4.10.1",
     "ethers": "^5.7.1",
     "next": "12.3.0",
+    "next-auth": "^4.10.2",
     "nextjs-progressbar": "^0.0.14",
     "react-dom": "18.2.0",
     "react-markdown": "^8.0.3",
+    "siwe": "^1.1.6",
     "wagmi": "^0.6.7"
   },
   "devDependencies": {
@@ -29,6 +36,7 @@
     "autoprefixer": "^10.4.11",
     "eslint": "8.23.1",
     "eslint-config-next": "12.3.0",
+    "husky": "^8.0.0",
     "postcss": "^8.4.16",
     "prettier": "^2.7.1",
     "react": "^18.2.0",
