@@ -6,7 +6,7 @@ const Home: NextPage = () => {
     <Layout heading="Home" content="Homepage of the legal engineering guild.">
       <div className="flex flex-col items-center justify-center h-screen">
         <div className="flex flex-col space-y-5">
-          <h1 className="text-6xl md:text-9xl font-extrabold">
+          <h1 className="text-6xl md:text-9xl font-extrabold font-cursive">
             Lex
             <a
               href="https://snapshot.org/#/lexdao.eth"

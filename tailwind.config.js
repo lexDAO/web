@@ -22,6 +22,10 @@ module.exports = {
         }
       }
     },
+    fontFamily: {
+      serif: ["Playfair Display", "serif"],
+      cursive: ["New Rocker", "cursive"],
+    },
   },
   plugins: [
     require('@tailwindcss/forms'),
