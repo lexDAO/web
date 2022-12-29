@@ -17,7 +17,7 @@ const Home: NextPage = () => {
               DAO
             </a>
           </h1>
-          <p className="text-xl md:text-5xl font-bold">Upgrading the legal tradition.</p>
+          <p className="text-xl md:text-5xl font-bold">Upgrading the legal tradition. </p>
           <p className="text-xl md:text-5xl font-bold">Together.</p>
         </div>
       </div>
