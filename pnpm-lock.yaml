@@ -6,7 +6,7 @@ specifiers:
   '@heroicons/react': ^2.0.13
   '@kalidao/reality': ^0.0.5
   '@rainbow-me/rainbowkit': ^0.7.0
-  '@rainbow-me/rainbowkit-siwe-next-auth': ^0.1.4
+  '@rainbow-me/rainbowkit-siwe-next-auth': 0.1.4
   '@splinetool/react-spline': ^2.2.3
   '@splinetool/runtime': ^0.9.116
   '@tailwindcss/forms': ^0.5.3
@@ -22,14 +22,14 @@ specifiers:
   ethers: ^5.7.1
   husky: ^8.0.0
   next: 12.3.0
-  next-auth: ^4.10.2
+  next-auth: 4.10.2
   nextjs-progressbar: ^0.0.14
   postcss: ^8.4.16
   prettier: ^2.7.1
   react: ^18.2.0
   react-dom: 18.2.0
   react-markdown: ^8.0.3
-  siwe: ^1.1.6
+  siwe: 1.1.6
   tailwindcss: ^3.1.8
   typescript: 4.8.3
   wagmi: ^0.6.7
@@ -40,14 +40,14 @@ dependencies:
   '@heroicons/react': 2.0.13_react@18.2.0
   '@kalidao/reality': 0.0.5_biqbaboplfbrettd7655fr4n2y
   '@rainbow-me/rainbowkit': 0.7.4_cgsp2b65os7s6ecd3p3axxmpeu
-  '@rainbow-me/rainbowkit-siwe-next-auth': 0.1.5_fgainhiygpdasjw4tvv4o4hcoy
+  '@rainbow-me/rainbowkit-siwe-next-auth': 0.1.4_smt6dpxdn4dw6afbiengub5tve
   '@splinetool/react-spline': 2.2.5_rdfu22co3q7hag3uhuc2ow7lqy
   '@splinetool/runtime': 0.9.173
   '@tanstack/react-query': 4.20.4_biqbaboplfbrettd7655fr4n2y
   daisyui: 2.46.0_r4gnkvssmvyxmi2wmat5xbx36a
   ethers: 5.7.2
   next: 12.3.0_biqbaboplfbrettd7655fr4n2y
-  next-auth: 4.18.7_c3hne4hwj64hb7tofigd3bvkji
+  next-auth: 4.10.2_biqbaboplfbrettd7655fr4n2y
   nextjs-progressbar: 0.0.14_next@12.3.0+react@18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-markdown: 8.0.4_w5j4k42lgipnm43s3brx6h3c34
@@ -803,17 +803,17 @@ packages:
     resolution: {integrity: sha512-HaW78NszGzRZd9SeoI3JD11JqY+lubnaOx7Pewj5pfjqWXOEATpeKIFb9Z4t2WBUK2iryiXX3lzWwmYWgUL0Ug==}
     dev: false
 
-  /@rainbow-me/rainbowkit-siwe-next-auth/0.1.5_fgainhiygpdasjw4tvv4o4hcoy:
-    resolution: {integrity: sha512-dbQvXcX0mcZ/7H8mx1OrBroJcY9iCdjLd89Z9iulHJsa+RT7bTfCNufw3SzRTzanBugZfyq9r+A+Q9JdYB3t2Q==}
+  /@rainbow-me/rainbowkit-siwe-next-auth/0.1.4_smt6dpxdn4dw6afbiengub5tve:
+    resolution: {integrity: sha512-wW4/yhMjYImaHWeg9CvZB/6ZbmwVA0BfDWmvqgG8yzkkxta4cGFA9glTqlq/+fsgAkXqdjBy7pYoidcIDpmTCA==}
     engines: {node: '>=12.4'}
     peerDependencies:
-      '@rainbow-me/rainbowkit': 0.5.x || 0.6.x || 0.7.x || 0.8.x
+      '@rainbow-me/rainbowkit': 0.5.x || 0.6.x || 0.7.x
       next-auth: ^4.10.2
       react: '>=17'
       siwe: ^1.1.6
     dependencies:
       '@rainbow-me/rainbowkit': 0.7.4_cgsp2b65os7s6ecd3p3axxmpeu
-      next-auth: 4.18.7_c3hne4hwj64hb7tofigd3bvkji
+      next-auth: 4.10.2_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
       siwe: 1.1.6_ethers@5.7.2
     dev: false
@@ -2001,8 +2001,8 @@ packages:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
     dev: true
 
-  /cookie/0.5.0:
-    resolution: {integrity: sha512-YZ3GUyn/o8gfKJlnlX7g7xq4gyO6OSuhGPKaaGssGB2qgDUS0gPgtTvoyZLTt9Ab6dC4hfc9dV5arkvc/OCmrw==}
+  /cookie/0.4.2:
+    resolution: {integrity: sha512-aSWTXFzaKWkvHO1Ny/s+ePFpvKsPnjc551iI41v3ny/ow6tBG5Vd+FuqGNhh1LxOmVzOlGUriIlOaokOvhaStA==}
     engines: {node: '>= 0.6'}
     dev: false
 
@@ -3824,11 +3824,10 @@ packages:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: true
 
-  /next-auth/4.18.7_c3hne4hwj64hb7tofigd3bvkji:
-    resolution: {integrity: sha512-kR3s1JVPMaDuSAlFxcGyv7Ec3fdE6za71r1F77IOII5zJmW2wfkIA2xj223fM0D20ip2pzFpHfk/qN4L6l5XMA==}
-    engines: {node: ^12.19.0 || ^14.15.0 || ^16.13.0 || ^18.12.0}
+  /next-auth/4.10.2_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-9XeP3faA5M3LneNJuzZCrmyR1ONYVH+pNQTozLBlpzXSkVRCgy+PTLAojOGkCo5v5MWcCZNTNHUOQL6gIcYwEQ==}
+    engines: {node: ^12.19.0 || ^14.15.0 || ^16.13.0}
     peerDependencies:
-      next: ^12.2.5 || ^13
       nodemailer: ^6.6.5
       react: ^17.0.2 || ^18
       react-dom: ^17.0.2 || ^18
@@ -3838,9 +3837,8 @@ packages:
     dependencies:
       '@babel/runtime': 7.20.7
       '@panva/hkdf': 1.0.2
-      cookie: 0.5.0
+      cookie: 0.4.2
       jose: 4.11.1
-      next: 12.3.0_biqbaboplfbrettd7655fr4n2y
       oauth: 0.9.15
       openid-client: 5.3.1
       preact: 10.11.3
