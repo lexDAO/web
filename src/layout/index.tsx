@@ -20,8 +20,8 @@ export default function Layout({ heading, content, children }: LayoutProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <div className="bg-white dark:bg-black min-h-screen flex flex-col space-between align-center">
+      <main className="w-screen min-h-screen">
+        <div className="bg-white dark:bg-black min-h-screen flex flex-col space-between align-center w-screen">
           <Header />
           {children}
           <Nav />
