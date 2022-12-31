@@ -1,6 +1,6 @@
 export default function JoinForm() {
   return (
-    <form className="absolute h-screen right-0 top-0 bottom-0 p-10 bg-gray-50  w-1/2 flex flex-col align-center justify-center space-y-5">
+    <form className="absolute min-h-screen w-full lg:bg-zinc-50 right-0 top-0 bottom-0 p-10 lg:w-1/2 flex flex-col align-center justify-center space-y-5">
       <h2 className="text-2xl font-semibold">Your support matters.</h2>
       <p className="text-md font-medium">
         This will generate a NFT on Ethereum. It will allow you to access exclusive token-gated content and discussions.

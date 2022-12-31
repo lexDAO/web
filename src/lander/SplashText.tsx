@@ -1,3 +1,5 @@
+import Typical from 'react-typical'
+
 export const SplashText = () => {
   return (
     <>
@@ -12,8 +14,24 @@ export const SplashText = () => {
           DAO
         </a>
       </h1>
-      <p className="text-xl md:text-5xl font-bold">Upgrading the legal tradition. </p>
-      <p className="text-xl md:text-5xl font-bold">Together.</p>
+      <p className="text-xl md:text-5xl font-mono">
+        <Typical
+          steps={[
+            'Building',
+            1000,
+            'Building the',
+            500,
+            'Building the next',
+            500,
+            'Building the next generation',
+            500,
+            'Building the next generation of',
+            500,
+            'Building the next generation of contracts',
+          ]}
+          wrapper="p"
+        />
+      </p>
     </>
   )
 }

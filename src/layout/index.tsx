@@ -26,8 +26,8 @@ export default function Layout({ heading, content, children }: LayoutProps) {
           {children}
           <Nav />
         </div>
-        <Footer />
       </main>
+      <Footer />
     </>
   )
 }

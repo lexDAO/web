@@ -59,7 +59,7 @@ function App({
               disclaimer: Disclaimer,
             }}
             theme={lightTheme({
-              accentColor: '#049119',
+              accentColor: '#6836ba',
               accentColorForeground: 'white',
               borderRadius: 'small',
               fontStack: 'system',
