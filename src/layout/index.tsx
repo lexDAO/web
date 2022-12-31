@@ -21,7 +21,7 @@ export default function Layout({ heading, content, children }: LayoutProps) {
       </Head>
 
       <main className="w-screen min-h-screen">
-        <div className="bg-white dark:bg-black min-h-screen flex flex-col space-between align-center w-screen">
+        <div className="bg-white  min-h-screen flex flex-col space-between align-center w-screen">
           <Header />
           {children}
           <Nav />
