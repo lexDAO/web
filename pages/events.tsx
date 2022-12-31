@@ -5,17 +5,17 @@ import { CalendarIcon, MapPinIcon } from '@heroicons/react/20/solid'
 import { EventImage } from '~/events'
 
 const Events: NextPage = () => {
-  const calendar = '85e1f52ab922b8d38553616d0938a840024508f714884250023c41e208941ee3@group.calendar.google.com'
-
   const { data, isLoading, isError } = useQuery(['calendar'], () =>
     fetch(
-      `https://www.googleapis.com/calendar/v3/calendars/${calendar}/events?key=${process.env.NEXT_PUBLIC_GOOGLE_API_KEY}`,
+      `https://www.googleapis.com/calendar/v3/calendars/85e1f52ab922b8d38553616d0938a840024508f714884250023c41e208941ee3@group.calendar.google.com/events?key=${process.env.NEXT_PUBLIC_GOOGLE_API_KEY}`,
       {
         method: 'GET',
       },
     ).then((res) => res.json()),
   )
-  console.log(data)
+
+  console.log('fetched', data)
+
   return (
     <Layout heading="Home" content="Homepage of the legal engineering guild.">
       <div className="h-screen flex flex-row justify-center items-top m-10 w-11/12">
@@ -53,18 +53,6 @@ const Events: NextPage = () => {
 }
 
 const EventCard = ({ event }: any) => {
-  console.log(
-    'date',
-    new Date(event.start.dateTime).toLocaleDateString('en-US', {
-      day: 'numeric',
-      weekday: 'short',
-      year: 'numeric',
-      month: 'short',
-      hour: '2-digit',
-      minute: '2-digit',
-    }),
-  )
-
   return (
     <li key={event.id} className="relative flex space-x-6 py-6 xl:static">
       <EventImage title={event.summary} />

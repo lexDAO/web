@@ -1,7 +1,6 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@fontsource/playfair-display': ^4.5.11
   '@headlessui/react': ^1.7.7
   '@heroicons/react': ^2.0.13
   '@kalidao/reality': ^0.0.5
@@ -35,7 +34,6 @@ specifiers:
   wagmi: ^0.6.7
 
 dependencies:
-  '@fontsource/playfair-display': 4.5.12
   '@headlessui/react': 1.7.7_biqbaboplfbrettd7655fr4n2y
   '@heroicons/react': 2.0.13_react@18.2.0
   '@kalidao/reality': 0.0.5_biqbaboplfbrettd7655fr4n2y
@@ -538,10 +536,6 @@ packages:
       '@ethersproject/logger': 5.7.0
       '@ethersproject/properties': 5.7.0
       '@ethersproject/strings': 5.7.0
-    dev: false
-
-  /@fontsource/playfair-display/4.5.12:
-    resolution: {integrity: sha512-B7EUxMRW6EzE701WICRmpQM30hd6vHPMrfOzb7u8H0nEwrjK2PtJjGv7rbEl9Q02qoT54947yi630QgL9he5/A==}
     dev: false
 
   /@headlessui/react/1.7.7_biqbaboplfbrettd7655fr4n2y:
