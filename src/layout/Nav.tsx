@@ -7,7 +7,7 @@ export default function Nav() {
       <Item link="/join" label="join" />
       <Item link="/events" label="events" />
       <Item link="https://snapshot.org/#/lexdao.eth" label="forum" isExternal={true} />
-      <Item link="/library" label="library" />
+      {/* <Item link="/library" label="library" /> */}
     </nav>
   )
 }

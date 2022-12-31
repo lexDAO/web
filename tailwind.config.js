@@ -36,8 +36,10 @@ module.exports = {
       }
     },
     fontFamily: {
-      serif: ["Playfair Display", "serif"],
-      cursive: ["New Rocker", "cursive"],
+      serif: ['Playfair Display', 'serif'],
+      mono: ['DotGothic16', 'sans-serif'],
+      custom: ["Custom", "sans-serif"],
+    
     },
   },
   plugins: [

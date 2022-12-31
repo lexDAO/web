@@ -22,14 +22,14 @@ const Events: NextPage = () => {
         <div className="flex flex-col items-center justify-top">
           {!isLoading && !isError && !data?.error && data?.items?.length != 0 && (
             <>
-              <h1 className="text-3xl font-bold font-cursive">Events</h1>
+              <h1 className="text-3xl font-bold font-mono">Events</h1>
               <span className="divider" />
             </>
           )}
           {!isLoading && !isError && data?.error ? (
             // class for centering text
             <div className="h-5/6 flex items-center justify-center">
-              <p className="font-cursive text-4xl text-red-500">
+              <p className="font-mono text-4xl text-red-500">
                 <strong>Error:</strong> {data.error.message}
               </p>
             </div>
@@ -41,7 +41,7 @@ const Events: NextPage = () => {
             </ol>
           ) : (
             <div className="h-5/6 flex items-center justify-center">
-              <p className="font-cursive text-4xl text-red-500">
+              <p className="font-mono text-4xl text-red-500">
                 <strong>Error:</strong> No events found.
               </p>
             </div>

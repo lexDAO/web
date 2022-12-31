@@ -11,9 +11,6 @@ import '@rainbow-me/rainbowkit/styles.css'
 import { getDefaultWallets, RainbowKitProvider, DisclaimerComponent, lightTheme } from '@rainbow-me/rainbowkit'
 import { RainbowKitSiweNextAuthProvider, GetSiweMessageOptions } from '@rainbow-me/rainbowkit-siwe-next-auth'
 
-import '@fontsource/playfair-display/variable.css'
-import '@fontsource/playfair-display/variable-italic.css'
-
 const { chains, provider } = configureChains(
   [chain.mainnet],
   [alchemyProvider({ apiKey: process.env.NEXT_PUBLIC_ALCHEMY_ID ?? '' }), publicProvider()],
