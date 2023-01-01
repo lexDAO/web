@@ -60,17 +60,20 @@ const Home: NextPage = () => {
                 </div>
                 <div className="mt-6">
                   <h2 className="text-3xl font-bold tracking-tight text-gray-900">
-                    Engineer the Next Generation of Legal Infrastructure
+                    Engineer the next generation of legal infrastructure
                   </h2>
                   <p className="mt-4 text-lg text-gray-500">
-                    LexDao employs subDAOs that engineer technological solutions to implementing legal frameworks
+                    We review best practices and standards for smart contracts. We put these standards into production
+                    with subDAOs like Kali.
                   </p>
                   <div className="mt-6">
                     <a
-                      href="#"
+                      href="https://discord.gg/gQDMhvDVWS"
+                      target="_blank"
+                      rel="nooppener noreferrer"
                       className="inline-flex rounded-md border border-transparent bg-gradient-to-r from-brand-700 to-brand-800 bg-origin-border px-4 py-2 text-base font-medium text-white shadow-sm hover:from-brand-700 hover:to-brand-700"
                     >
-                      Get started
+                      Join the Discussion
                     </a>
                   </div>
                 </div>
@@ -79,8 +82,11 @@ const Home: NextPage = () => {
                 <blockquote>
                   <div>
                     <p className="text-base text-gray-500">
-                      Join us in building the next generation of contracts. We are a community of legal engineers,
-                      developers, and lawyers who are building the future of law.
+                      We meet every Friday at 12:00PM EST to hack on legal tech. Join us on our{' '}
+                      <a href="https://discord.gg/gQDMhvDVWS" target="_blank" rel="nooppener noreferrer">
+                        Discord
+                      </a>
+                      .
                     </p>
                   </div>
                 </blockquote>
@@ -164,7 +170,7 @@ const Home: NextPage = () => {
               <blockquote>
                 <div>
                   <p className="text-base text-gray-500">
-                    Join the study group every friday at 6pm to discuss the latest news and draft legislation
+                    Join the study group to discuss the latest developments in crypto law and policy.
                   </p>
                 </div>
               </blockquote>
