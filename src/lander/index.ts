@@ -1,3 +1,4 @@
-import { SplashText } from './SplashText'
+import { Splash } from './Splash'
+import { Features } from './Features'
 
-export { SplashText }
+export { Splash, Features }

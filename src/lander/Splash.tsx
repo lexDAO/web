@@ -1,6 +1,6 @@
 import Typical from 'react-typical'
 
-export const SplashText = () => {
+export const Splash = () => {
   return (
     <>
       <h1 className="text-6xl md:text-9xl font-extrabold font-serif text-zinc-800">

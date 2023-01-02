@@ -10,6 +10,7 @@ import { publicProvider } from 'wagmi/providers/public'
 import '@rainbow-me/rainbowkit/styles.css'
 import { getDefaultWallets, RainbowKitProvider, DisclaimerComponent, lightTheme } from '@rainbow-me/rainbowkit'
 import { RainbowKitSiweNextAuthProvider, GetSiweMessageOptions } from '@rainbow-me/rainbowkit-siwe-next-auth'
+import { rainbowTheme } from '~/utils/'
 
 const { chains, provider } = configureChains(
   [chain.mainnet],
@@ -58,13 +59,7 @@ function App({
               learnMoreUrl: '/about',
               disclaimer: Disclaimer,
             }}
-            theme={lightTheme({
-              accentColor: '#6836ba',
-              accentColorForeground: 'white',
-              borderRadius: 'small',
-              fontStack: 'system',
-              overlayBlur: 'small',
-            })}
+            theme={rainbowTheme}
           >
             <QueryClientProvider client={reactQueryClient}>
               <NextNProgress color="#be93e4" />
