@@ -18,8 +18,6 @@ export default function Nav() {
       <Item link="/events" label="events" isActive={isActive('/events')} />
       <Item link="https://snapshot.org/#/lexdao.eth" label="governance" isExternal={true} />
       <Item link="/guilds" label="guilds" isActive={isActive('/guilds')} />
-      {/* TODO */}
-      {/* <Item link="/library" label="library" /> */}
     </nav>
   )
 }

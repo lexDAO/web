@@ -9,7 +9,7 @@ type Props = {
 
 export default function Home({ link, label, isExternal, isActive }: Props) {
   const linkStyle =
-    'w-full px-3 py-1 hover:bg-brand-800  hover:focus:bg-brand-800  hover:text-white  text-center text-xl font-bold font-mono '
+    'px-3 py-1 hover:bg-brand-800  hover:focus:bg-brand-800  hover:text-white  text-center text-xl font-bold font-mono '
 
   if (isExternal === true)
     return (

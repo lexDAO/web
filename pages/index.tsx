@@ -2,14 +2,8 @@ import type { NextPage } from 'next'
 import Link from 'next/link'
 import { Splash, Features } from '~/lander'
 import Layout from '~/layout'
-import {
-  BoltIcon,
-  BriefcaseIcon,
-  BuildingOffice2Icon,
-  Cog8ToothIcon,
-  GlobeAltIcon,
-  LightBulbIcon,
-} from '@heroicons/react/20/solid'
+import { BoltIcon, GlobeAltIcon, LightBulbIcon } from '@heroicons/react/20/solid'
+import Balancer from 'react-wrap-balancer'
 
 const Home: NextPage = () => {
   const features = [
@@ -66,7 +60,9 @@ const Home: NextPage = () => {
                   </span>
                 </div>
                 <div className="mt-6">
-                  <h3 className="text-lg font-medium text-white">{feature.name}</h3>
+                  <h3 className="text-lg font-medium text-white">
+                    <Balancer>{feature.name}</Balancer>
+                  </h3>
                   <p className="mt-2 text-base text-brand-50">{feature.description}</p>
                 </div>
               </div>
