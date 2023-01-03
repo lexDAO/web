@@ -46,7 +46,7 @@ const Home: NextPage = () => {
       <div className="bg-gradient-to-r from-brand-600 to-brand-900">
         <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:px-8 lg:pt-24">
           <h2 className="text-3xl font-bold tracking-tight text-white">
-            Join us in securing rules and promises with code.
+            <Balancer>Join us in securing rules and promises with code.</Balancer>
           </h2>
           <p className="mt-4 max-w-3xl text-lg text-brand-50">
             LexDAO is a community of legal engineers, lawyers, and technologists who are building the future of law.
