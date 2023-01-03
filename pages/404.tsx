@@ -9,10 +9,12 @@ export default function NotFound() {
         <main className="flex flex-grow flex-col bg-white">
           <div className="mx-auto flex w-full max-w-7xl flex-grow flex-col px-4 sm:px-6 lg:px-8">
             <div className="flex-shrink-0 pt-10 sm:pt-16">
-              <a href="/" className="inline-flex">
-                <span className="sr-only">LexDAO</span>
-                <img className="h-12 w-auto" src="/lexdao.jpeg" alt="" />
-              </a>
+              <Link href="/" passHref>
+                <a className="inline-flex">
+                  <span className="sr-only">LexDAO</span>
+                  <img className="h-12 w-auto" src="/lexdao.jpeg" alt="" />
+                </a>
+              </Link>
             </div>
             <div className="my-auto flex-shrink-0 py-16 sm:py-32">
               <p className="text-base font-semibold text-brand-600">404</p>
