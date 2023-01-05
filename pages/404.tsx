@@ -9,11 +9,9 @@ export default function NotFound() {
         <main className="flex flex-grow flex-col bg-white">
           <div className="mx-auto flex w-full max-w-7xl flex-grow flex-col px-4 sm:px-6 lg:px-8">
             <div className="flex-shrink-0 pt-10 sm:pt-16">
-              <Link href="/" passHref>
-                <a className="inline-flex">
-                  <span className="sr-only">LexDAO</span>
-                  <img className="h-12 w-auto" src="/lexdao.jpeg" alt="" />
-                </a>
+              <Link href="/" className="inline-flex">
+                <span className="sr-only">LexDAO</span>
+                <img className="h-12 w-auto" src="/lexdao.jpeg" alt="" />
               </Link>
             </div>
             <div className="my-auto flex-shrink-0 py-16 sm:py-32">
@@ -21,11 +19,12 @@ export default function NotFound() {
               <h1 className="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">Page not found</h1>
               <p className="mt-2 text-base text-zinc-500">We couldn’t find the page you’re looking for.</p>
               <div className="mt-6">
-                <Link href="/" passHref>
-                  <a className="text-base font-medium text-brand-600 hover:text-brand-500">
-                    Go back home
-                    <span aria-hidden="true"> &rarr;</span>
-                  </a>
+                <Link
+                  href="/"
+                  className="text-base font-medium text-brand-600 hover:text-brand-500 flex flex-row space-x-2"
+                >
+                  <p>Go back home</p>
+                  <span aria-hidden="true"> &rarr;</span>
                 </Link>
               </div>
             </div>

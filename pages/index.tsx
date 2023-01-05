@@ -31,13 +31,11 @@ const Home: NextPage = () => {
         <div className="flex flex-col space-y-5">
           <Splash />
           {/* cta button, style terminal aesthetic */}
-          <Link href="/join" passHref>
-            <a
-              href="https://discord.gg/8JZ2WzZ"
-              className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg glass text-black hover:bg-brand-50 rounded-b-full"
-            >
-              Join the Guild
-            </a>
+          <Link
+            href="/join"
+            className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg glass text-black hover:bg-brand-50 rounded-b-full"
+          >
+            Join the Guild
           </Link>
         </div>
       </div>

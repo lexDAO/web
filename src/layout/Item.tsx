@@ -19,14 +19,14 @@ export default function Home({ link, label, isExternal, isActive }: Props) {
     )
   if (isActive === true)
     return (
-      <Link href={link}>
-        <a className={linkStyle + 'bg-brand-800 text-white'}>{label}</a>
+      <Link href={link} className={linkStyle + 'bg-brand-800 text-white'}>
+        {label}
       </Link>
     )
 
   return (
-    <Link href={link}>
-      <a className={linkStyle}>{label}</a>
+    <Link href={link} className={linkStyle}>
+      {label}
     </Link>
   )
 }

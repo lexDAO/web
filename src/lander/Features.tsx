@@ -1,4 +1,5 @@
 import { WrenchScrewdriverIcon, PencilIcon, BookOpenIcon } from '@heroicons/react/20/solid'
+import Image from 'next/image'
 
 export const Features = () => {
   return (
@@ -49,10 +50,12 @@ export const Features = () => {
           </div>
           <div className="mt-12 sm:mt-16 lg:mt-0">
             <div className="-mr-48 pl-4 sm:pl-6 md:-mr-16 lg:relative lg:m-0 lg:h-full lg:px-0">
-              <img
+              <Image
                 className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
                 src="/images/hacking.png"
                 alt="legal hacks"
+                width={500}
+                height={500}
               />
             </div>
           </div>

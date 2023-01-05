@@ -74,12 +74,12 @@ export default function Footer() {
           <p>
             {' '}
             We are not a law firm, or a substitute for an attorney or a law firm. Use of our products is governed by our{' '}
-            <Link href="/terms">
-              <a className="hover:text-brand-700 hover:underline">Terms of Use</a>
-            </Link>{' '}
-            and{' '}
-            <Link href="/privacy">
-              <a className="hover:text-brand-700 hover:underline">Privacy</a>
+            <Link href="/terms" className="hover:text-brand-700 hover:underline">
+              Terms of Use
+            </Link>
+            and
+            <Link href="/privacy" className="hover:text-brand-700 hover:underline">
+              Privacy
             </Link>
             .
           </p>
