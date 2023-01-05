@@ -9,7 +9,7 @@ export default function NotFound() {
   return (
     <>
       <Head>
-        <title>LexDAO - You're lost.</title>
+        <title>LexDAO - You are lost.</title>
         <meta name="description" content={'You have found what does not exist.'} />
         <meta name="robots" content="noindex,nofollow" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
