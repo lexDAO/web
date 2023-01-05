@@ -76,10 +76,10 @@ export default function Footer() {
             We are not a law firm, or a substitute for an attorney or a law firm. Use of our products is governed by our{' '}
             <Link href="/terms" className="hover:text-brand-700 hover:underline">
               Terms of Use
-            </Link>
-            and
+            </Link>{' '}
+            and{' '}
             <Link href="/privacy" className="hover:text-brand-700 hover:underline">
-              Privacy
+              Privacy Policy
             </Link>
             .
           </p>

@@ -20,7 +20,7 @@ const Home: NextPage = () => {
     },
     {
       name: 'Grow',
-      description: 'Grow your knowledge base in a radically new and emerging space',
+      description: 'Grow your knowledge base in a radically new and emerging space.',
       icon: LightBulbIcon,
     },
   ]
