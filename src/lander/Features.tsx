@@ -1,6 +1,10 @@
 import { WrenchScrewdriverIcon, PencilIcon, BookOpenIcon } from '@heroicons/react/20/solid'
 import Image from 'next/image'
 
+import hacking from '../../public/images/hacking.png'
+import parliament from '../../public/images/parliament.png'
+import library from '../../public/images/library.png'
+
 export const Features = () => {
   return (
     <div className="relative overflow-hidden pt-16 pb-32">
@@ -52,10 +56,8 @@ export const Features = () => {
             <div className="-mr-48 pl-4 sm:pl-6 md:-mr-16 lg:relative lg:m-0 lg:h-full lg:px-0">
               <Image
                 className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                src="/images/hacking.png"
+                src={hacking}
                 alt="legal hacks"
-                width={500}
-                height={500}
               />
             </div>
           </div>
@@ -91,9 +93,9 @@ export const Features = () => {
           </div>
           <div className="mt-12 sm:mt-16 lg:col-start-1 lg:mt-0">
             <div className="-ml-48 pr-4 sm:pr-6 md:-ml-16 lg:relative lg:m-0 lg:h-full lg:px-0">
-              <img
+              <Image
                 className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
-                src="/images/parliament.png"
+                src={parliament}
                 alt="study group"
               />
             </div>
@@ -148,9 +150,9 @@ export const Features = () => {
         </div>
         <div className="mt-12 sm:mt-16 lg:mt-0">
           <div className="-mr-48 pl-4 sm:pl-6 md:-mr-16 lg:relative lg:m-0 lg:h-full lg:px-0">
-            <img
+            <Image
               className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-              src="/images/library.png"
+              src={library}
               alt="study group"
             />
           </div>
