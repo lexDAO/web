@@ -1,0 +1,26 @@
+{
+    "ci": {
+      "collect": {
+        "startServerCommand": "pnpm run start",
+        "startServerReadyPattern": "ready on",
+        "url": [
+          "http://localhost:3000",
+          "http://localhost:3000/join",
+          "http://localhost:3000/guilds",
+          "http://localhost:3000/events"
+        ],
+        "numberOfRuns": 3,
+        "settings": {
+          "preset": "desktop"
+        }
+      },
+      "assert": {
+        "preset": "lighthouse:recommended"
+      },
+      "upload": {
+        "target": "temporary-public-storage"
+      },
+      "server": {}
+    }
+  }
+  
