@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import lostMan from '../public/images/lost.png'
+import lexdao from '../public/lexdao.jpeg'
 
 export default function NotFound() {
   return (
@@ -11,7 +12,7 @@ export default function NotFound() {
             <div className="flex-shrink-0 pt-10 sm:pt-16">
               <Link href="/" className="inline-flex">
                 <span className="sr-only">LexDAO</span>
-                <Image className="h-12 w-auto" src={lostMan} alt="" />
+                <Image className="h-12 w-auto" src={lexdao} alt="" />
               </Link>
             </div>
             <div className="my-auto flex-shrink-0 py-16 sm:py-32">
@@ -69,19 +70,7 @@ export default function NotFound() {
         </footer>
       </div>
       <div className="hidden lg:absolute lg:inset-y-0 lg:right-0 lg:block lg:w-1/2 overflow-hidden">
-        <Image
-          className="absolute inset-0 h-full w-full object-cover"
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-
-            objectFit: 'cover',
-          }}
-          src={lostMan}
-          alt=""
-        />
+        <Image className="absolute inset-0 h-full w-full object-cover" src={lostMan} alt="" />
       </div>
     </div>
   )
