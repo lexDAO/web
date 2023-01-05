@@ -11,7 +11,7 @@ export default function NotFound() {
             <div className="flex-shrink-0 pt-10 sm:pt-16">
               <Link href="/" className="inline-flex">
                 <span className="sr-only">LexDAO</span>
-                <img className="h-12 w-auto" src="/lexdao.jpeg" alt="" />
+                <Image className="h-12 w-auto" src={lostMan} alt="" />
               </Link>
             </div>
             <div className="my-auto flex-shrink-0 py-16 sm:py-32">
