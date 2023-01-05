@@ -5,15 +5,7 @@ export const Splash = () => {
   return (
     <>
       <h1 className="text-6xl md:text-9xl font-extrabold font-serif text-zinc-800">
-        Lex
-        <a
-          href="https://snapshot.org/#/lexdao.eth"
-          target="_blank"
-          rel="noreferrer"
-          className="text-zinc-800 font-serif"
-        >
-          <Balancer>DAO</Balancer>
-        </a>
+        <Balancer>LexDAO</Balancer>
       </h1>
       <p className="text-xl md:text-5xl font-mono">
         <Balancer>

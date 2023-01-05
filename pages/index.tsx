@@ -28,9 +28,8 @@ const Home: NextPage = () => {
   return (
     <Layout heading="Home" content="Homepage of the legal engineering guild.">
       <div className="flex flex-col items-center justify-center h-screen">
-        <div className="flex flex-col space-y-5">
+        <div className="flex flex-col space-y-5 w-[70vw]">
           <Splash />
-          {/* cta button, style terminal aesthetic */}
           <Link
             href="/join"
             className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg glass text-black hover:bg-brand-50 rounded-b-full"
