@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Footer from './Footer'
 import Header from './Header'
-import Nav from './Nav'
 
 type LayoutProps = {
   heading: string
@@ -20,12 +19,10 @@ export default function Layout({ heading, content, children }: LayoutProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <main className="w-screen min-h-screen">
         <div className="bg-white  min-h-screen flex flex-col space-between align-center w-screen">
           <Header />
           {children}
-          <Nav />
         </div>
       </main>
       <Footer />
