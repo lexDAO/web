@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Footer from './Footer'
 import Header from './Header'
-import Nav from './Nav'
 
 type LayoutProps = {
   heading: string
@@ -17,14 +16,16 @@ export default function Layout({ heading, content, children }: LayoutProps) {
       <Head>
         <title>{title}</title>
         <meta name="description" content={content} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="bg-white dark:bg-black relative min-h-screen flex flex-col space-between align-center">
-        <Header />
-        {children}
-        <Nav />
-        <Footer />
-      </div>
+      <main className="w-screen min-h-screen">
+        <div className="bg-white  min-h-screen flex flex-col space-between align-center w-screen">
+          <Header />
+          {children}
+        </div>
+      </main>
+      <Footer />
     </>
   )
 }

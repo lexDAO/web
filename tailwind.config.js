@@ -8,22 +8,31 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        // mala
         brand: {
-          50: '#f9f1fe',
-          100: '#f3e7fc',
-          200: '#eddbf9',
-          300: '#e3ccf4',
-          400: '#d3b4ed',
-          500: '#be93e4',
-          600: '#8e4ec6',
-          700: '#8445bc',
-          800: '#793aaf',
-          900: '#2b0e44',
-        }
+          '50': '#bbb4e9',
+          '100': '#b7ace7',
+          '200': '#ab9ce2',
+          '300': '#9881da',
+          '400': '#7d55ce',
+          '500': '#6836ba',
+          '600': '#582c96',
+          '700': '#4e247b',
+          '800': '#3d1a5b',
+          '900': '#2d123f',
+      },
+
       }
+    },
+    fontFamily: {
+      serif: ['Playfair Display', 'serif'],
+      mono: ['DotGothic16', 'sans-serif'],
+      custom: ["Custom", "sans-serif"],
+    
     },
   },
   plugins: [
     require('@tailwindcss/forms'),
+    require("daisyui"),
   ],
 }
