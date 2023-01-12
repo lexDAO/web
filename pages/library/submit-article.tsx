@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Layout from '~/layout'
-import Multiselect from './Multiselect'
+import Multiselect from '~/library/Multiselect'
 import React, { useState } from 'react'
 import axios from 'axios'
 
@@ -53,12 +53,13 @@ const SubmitArticle: NextPage = () => {
   const [link, setLink] = useState('')
   const [notes, setNotes] = useState('')
   const [date, setDate] = useState('')
-//email, author, link, notes, date, title 
+
+  //email, author, link, notes, date, title
   const onSubmit = async () => {
     if (tag && tag.length > 0) {
       const result = await axios
         .post('http://localhost:1337/api/articles', {
-          data: { topics: selectedTag, type: selectedType, email, author, link, notes, date, title}
+          data: { topics: selectedTag, type: selectedType, email, author, link, notes, date, title },
         })
         .catch((error) => {
           console.log(error.response)
@@ -66,6 +67,7 @@ const SubmitArticle: NextPage = () => {
       console.log(result)
     }
   }
+
   return (
     <Layout heading="Home" content="Homepage of the legal engineering guild.">
       <h1 className="text-3xl font-bold text-white">Submit your article</h1>

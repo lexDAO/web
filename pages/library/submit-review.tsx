@@ -49,8 +49,10 @@ const SubmitReview: NextPage = () => {
   return (
     <Layout heading="Home" content="Homepage of the legal engineering guild.">
       <h1 className="px-8 mx-8 text-3xl font-bold font-sans text-white">Submit Article Feedback</h1>
-      <div className="mb-6  flex flex-col 
-                    items-center justify-center">
+      <div
+        className="mb-6  flex flex-col 
+                    items-center justify-center"
+      >
         <label className="block mb-2 text-sm font-medium font-sans dark:text-gray-300">Email Address</label>
         <input
           onChange={(e) => setEmail(e.target.value)}
@@ -86,7 +88,9 @@ const SubmitReview: NextPage = () => {
           id="base-input"
           className="border-gray-300 text-sm rounded-md w-64 p-2.5 bg-zinc-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white  dark:focus:border-stone-700"
         />
-        <label className="block mb-2 text-sm font-medium font-sans text-gray-900 dark:text-gray-300">Title of the Article</label>
+        <label className="block mb-2 text-sm font-medium font-sans text-gray-900 dark:text-gray-300">
+          Title of the Article
+        </label>
         <input
           onChange={(e) => setTitle(e.target.value)}
           type="text"
@@ -111,7 +115,10 @@ const SubmitReview: NextPage = () => {
             onChange={(e) => setNumpages(e.target.value)}
             className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
           />
-          <label htmlFor="default-radio-1" className="ml-2 text-sm font-medium font-sans text-gray-900 dark:text-gray-300">
+          <label
+            htmlFor="default-radio-1"
+            className="ml-2 text-sm font-medium font-sans text-gray-900 dark:text-gray-300"
+          >
             1-5
           </label>
           <input
@@ -122,7 +129,10 @@ const SubmitReview: NextPage = () => {
             onChange={(e) => setNumpages(e.target.value)}
             className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
           />
-          <label htmlFor="default-radio-2" className="ml-2 text-sm font-medium font-sans text-gray-900 dark:text-gray-300">
+          <label
+            htmlFor="default-radio-2"
+            className="ml-2 text-sm font-medium font-sans text-gray-900 dark:text-gray-300"
+          >
             5-20
           </label>
           <input
@@ -133,7 +143,10 @@ const SubmitReview: NextPage = () => {
             onChange={(e) => setNumpages(e.target.value)}
             className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
           />
-          <label htmlFor="default-radio-2" className="ml-2 text-sm font-medium font-sans text-gray-900 dark:text-gray-300">
+          <label
+            htmlFor="default-radio-2"
+            className="ml-2 text-sm font-medium font-sans text-gray-900 dark:text-gray-300"
+          >
             20-50
           </label>
           <input
@@ -144,7 +157,10 @@ const SubmitReview: NextPage = () => {
             onChange={(e) => setNumpages(e.target.value)}
             className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
           />
-          <label htmlFor="default-radio-2" className="ml-2 text-sm font-medium font-sans text-gray-900 dark:text-gray-300">
+          <label
+            htmlFor="default-radio-2"
+            className="ml-2 text-sm font-medium font-sans text-gray-900 dark:text-gray-300"
+          >
             50-100
           </label>
           <input
@@ -155,7 +171,10 @@ const SubmitReview: NextPage = () => {
             onChange={(e) => setNumpages(e.target.value)}
             className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
           />
-          <label htmlFor="default-radio-2" className="ml-2 text-sm font-medium font-sans text-gray-900 dark:text-gray-300">
+          <label
+            htmlFor="default-radio-2"
+            className="ml-2 text-sm font-medium font-sans text-gray-900 dark:text-gray-300"
+          >
             100+
           </label>
         </div>
@@ -181,7 +200,10 @@ const SubmitReview: NextPage = () => {
             onChange={(e) => setLaw(e.target.value)}
             className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
           />
-          <label htmlFor="default-radio-1" className="ml-2 text-sm font-medium font-sans text-gray-900 dark:text-gray-300">
+          <label
+            htmlFor="default-radio-1"
+            className="ml-2 text-sm font-medium font-sans text-gray-900 dark:text-gray-300"
+          >
             Common Law
           </label>
           <input
@@ -192,7 +214,10 @@ const SubmitReview: NextPage = () => {
             onChange={(e) => setLaw(e.target.value)}
             className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
           />
-          <label htmlFor="default-radio-1" className="ml-2 text-sm font-medium font-sans text-gray-900 dark:text-gray-300">
+          <label
+            htmlFor="default-radio-1"
+            className="ml-2 text-sm font-medium font-sans text-gray-900 dark:text-gray-300"
+          >
             Civil Law
           </label>
           <input
@@ -203,7 +228,10 @@ const SubmitReview: NextPage = () => {
             onChange={(e) => setLaw(e.target.value)}
             className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
           />
-          <label htmlFor="default-radio-1" className="ml-2 text-sm font-medium font-sans text-gray-900 dark:text-gray-300">
+          <label
+            htmlFor="default-radio-1"
+            className="ml-2 text-sm font-medium font-sans text-gray-900 dark:text-gray-300"
+          >
             Not Applicable
           </label>
         </div>
@@ -212,28 +240,34 @@ const SubmitReview: NextPage = () => {
           review?
         </label>
         <div className="flex items-center mb-4">
-        <input
-          id="default-radio-1"
-          type="radio"
-          value="true"
-          name="legalenforceable"
-          onChange={(e) => setLegallyEnforceable(e.target.value)}
-          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-        />
-        <label htmlFor="default-radio-1" className=" ml-2 text-sm font-medium font-sans text-gray-900 dark:text-gray-300">
-          Yes
-        </label>
-        <input
-          id="default-radio-1"
-          type="radio"
-          value="false"
-          name="legalenforceable"
-          onChange={(e) => setLegallyEnforceable(e.target.value)}
-          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-        />
-        <label htmlFor="default-radio-1" className=" ml-2 text-sm font-medium font-sans text-gray-900 dark:text-gray-300">
-          No
-        </label>
+          <input
+            id="default-radio-1"
+            type="radio"
+            value="true"
+            name="legalenforceable"
+            onChange={(e) => setLegallyEnforceable(e.target.value)}
+            className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+          />
+          <label
+            htmlFor="default-radio-1"
+            className=" ml-2 text-sm font-medium font-sans text-gray-900 dark:text-gray-300"
+          >
+            Yes
+          </label>
+          <input
+            id="default-radio-1"
+            type="radio"
+            value="false"
+            name="legalenforceable"
+            onChange={(e) => setLegallyEnforceable(e.target.value)}
+            className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+          />
+          <label
+            htmlFor="default-radio-1"
+            className=" ml-2 text-sm font-medium font-sans text-gray-900 dark:text-gray-300"
+          >
+            No
+          </label>
         </div>
         <label className="block mb-2 text-sm font-medium font-sans text-gray-900 dark:text-gray-300">
           What are the rulings or codes (law) that the article referring to in order to make this enforceable?
@@ -257,39 +291,48 @@ const SubmitReview: NextPage = () => {
           How qualified is the author of the piece on the subject?
         </label>
         <div className="flex items-center mb-4">
-        <input
-          id="default-radio-1"
-          type="radio"
-          value="Very Qualified"
-          name="qualification"
-          onChange={(e) => setAuthorQualification(e.target.value)}
-          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-        />
-        <label htmlFor="default-radio-1" className="ml-2 text-sm font-medium font-sans text-gray-900 dark:text-gray-300">
-          Very Qualified
-        </label>
-        <input
-          id="default-radio-1"
-          type="radio"
-          value="Moderately Qualified"
-          name="qualification"
-          onChange={(e) => setAuthorQualification(e.target.value)}
-          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-        />
-        <label htmlFor="default-radio-1" className="ml-2 text-sm font-medium font-sans text-gray-900 dark:text-gray-300">
-          Moderately Qualified
-        </label>
-        <input
-          id="default-radio-1"
-          type="radio"
-          value="Not Qualified"
-          name="qualification"
-          onChange={(e) => setAuthorQualification(e.target.value)}
-          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-        />
-        <label htmlFor="default-radio-1" className="ml-2 text-sm font-medium font-sans text-gray-900 dark:text-gray-300">
-          Not Qualified
-        </label>
+          <input
+            id="default-radio-1"
+            type="radio"
+            value="Very Qualified"
+            name="qualification"
+            onChange={(e) => setAuthorQualification(e.target.value)}
+            className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+          />
+          <label
+            htmlFor="default-radio-1"
+            className="ml-2 text-sm font-medium font-sans text-gray-900 dark:text-gray-300"
+          >
+            Very Qualified
+          </label>
+          <input
+            id="default-radio-1"
+            type="radio"
+            value="Moderately Qualified"
+            name="qualification"
+            onChange={(e) => setAuthorQualification(e.target.value)}
+            className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+          />
+          <label
+            htmlFor="default-radio-1"
+            className="ml-2 text-sm font-medium font-sans text-gray-900 dark:text-gray-300"
+          >
+            Moderately Qualified
+          </label>
+          <input
+            id="default-radio-1"
+            type="radio"
+            value="Not Qualified"
+            name="qualification"
+            onChange={(e) => setAuthorQualification(e.target.value)}
+            className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+          />
+          <label
+            htmlFor="default-radio-1"
+            className="ml-2 text-sm font-medium font-sans text-gray-900 dark:text-gray-300"
+          >
+            Not Qualified
+          </label>
         </div>
         <label className="block mb-2 text-sm font-medium font-sans text-gray-900 dark:text-gray-300">
           What are the author(s) qualifications?

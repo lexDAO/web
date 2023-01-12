@@ -1,7 +1,6 @@
 import type { NextPage } from 'next'
 import Layout from '~/layout'
 
-
 const Collections: NextPage = () => {
   return (
     <Layout heading="Home" content="Homepage of the legal engineering guild.">
