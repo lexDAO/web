@@ -4,6 +4,7 @@ import { useQuery } from 'wagmi'
 import { CalendarIcon, MapPinIcon } from '@heroicons/react/20/solid'
 import { EventImage } from '~/events'
 
+
 const Events: NextPage = () => {
   const { data, isLoading, isError } = useQuery(['calendar'], () =>
     fetch(
