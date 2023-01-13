@@ -5,7 +5,7 @@ import Nav from './Nav'
 
 export default function Header() {
   return (
-    <header className="flex flex-row justify-between align-center pt-2 pr-2 pl-2">
+    <header className="items-center flex flex-row justify-between px-2 pt-2">
       {/* add lexdao.jpeg as logo image */}
       <Link href={'/'} className="border-b-2">
         LexDAO

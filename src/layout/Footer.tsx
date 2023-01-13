@@ -68,8 +68,8 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="footer items-center p-4 bg-zinc-50 text-zinc-900">
-      <div className="items-center grid-flow-col">
+    <footer className="footer items-center bg-zinc-50 p-4 text-zinc-900">
+      <div className="grid-flow-col items-center">
         <div>
           <p>
             {' '}
@@ -92,7 +92,7 @@ export default function Footer() {
             href={link.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-row items-center justify-center p-2 hover:bg-brand-100 rounded-full"
+            className="flex flex-row items-center justify-center rounded-full p-2 hover:bg-brand-100"
           >
             {link.icon}
             <span className="sr-only">{link.sr}</span>

@@ -13,7 +13,7 @@ export default function Nav() {
 
   return (
     // make responsive for mobile
-    <nav className="flex flex-row justify-center align-center border-b-4 border-black ">
+    <nav className="items-center flex flex-row justify-center border-b-4 border-black ">
       <Item link="/" label="home" isActive={isActive('/')} />
       <Item link="/join" label="join" isActive={isActive('/join')} />
       <Item link="/events" label="events" isActive={isActive('/events')} />

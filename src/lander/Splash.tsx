@@ -4,10 +4,10 @@ import Balancer from 'react-wrap-balancer'
 export const Splash = () => {
   return (
     <>
-      <h1 className="text-6xl md:text-9xl font-extrabold font-serif text-zinc-800">
+      <h1 className="font-serif text-6xl font-extrabold text-zinc-800 md:text-9xl">
         <Balancer>LexDAO</Balancer>
       </h1>
-      <p className="text-xl md:text-5xl font-mono">
+      <p className="font-mono text-xl md:text-5xl">
         <Balancer>
           <Typical
             steps={[

@@ -18,29 +18,29 @@ const Events: NextPage = () => {
 
   return (
     <Layout heading="Home" content="Homepage of the legal engineering guild.">
-      <div className="h-screen flex flex-row justify-center items-top m-10 w-11/12">
-        <div className="flex flex-col items-center justify-top">
+      <div className="m-10 flex h-screen w-11/12 flex-row items-start justify-center">
+        <div className="flex flex-col items-center justify-start">
           {!isLoading && !isError && !data?.error && data?.items?.length != 0 && (
             <>
-              <h1 className="text-3xl font-bold font-mono">Events</h1>
+              <h1 className="font-mono text-3xl font-bold">Events</h1>
               <span className="divider" />
             </>
           )}
           {!isLoading && !isError && data?.error ? (
             // class for centering text
-            <div className="h-5/6 flex items-center justify-center">
+            <div className="flex h-5/6 items-center justify-center">
               <p className="font-mono text-4xl text-red-500">
                 <strong>Error:</strong> {data.error.message}
               </p>
             </div>
           ) : data?.items?.length != 0 ? (
-            <ol className="mt-4 divide-y divide-gray-100 text-sm leading-6 lg:col-span-7 xl:col-span-8 sm:w-full lg:w-6/12">
+            <ol className="mt-4 divide-y divide-gray-100 text-sm leading-6 sm:w-full lg:col-span-7 lg:w-6/12 xl:col-span-8">
               {data?.items?.map((item: any) => (
                 <EventCard key={item.id} event={item} />
               ))}
             </ol>
           ) : (
-            <div className="h-5/6 flex items-center justify-center">
+            <div className="flex h-5/6 items-center justify-center">
               <p className="font-mono text-4xl text-red-500">
                 <strong>Error:</strong> No events found.
               </p>

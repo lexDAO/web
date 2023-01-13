@@ -31,7 +31,7 @@ const Guilds: NextPage = () => {
   return (
     <Layout heading="Guilds" content="Learn more about our affiliated guilds.">
       <div className="h-screen">
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col items-center justify-center">
           <p className="mt-4 max-w-3xl text-lg text-gray-500">
             LexDAO is a community of legal engineers, lawyers, and technologists who are building the future of law.
           </p>
@@ -40,9 +40,9 @@ const Guilds: NextPage = () => {
               <a
                 key={project.name}
                 href={project.href}
-                className="flex flex-col items-center justify-center p-4 space-y-4 text-center transition duration-300 ease-in-out transform bg-white rounded-lg shadow-xl hover:scale-105"
+                className="flex flex-col items-center justify-center space-y-4 rounded-lg bg-white p-4 text-center shadow-xl transition duration-300 ease-in-out hover:scale-105"
               >
-                <project.icon className="w-12 h-12 text-brand-600" aria-hidden="true" />
+                <project.icon className="h-12 w-12 text-brand-600" aria-hidden="true" />
                 <div className="space-y-2">
                   <h3 className="text-lg font-medium text-gray-900">{project.name}</h3>
                   <p className="text-base text-gray-500">{project.description}</p>

@@ -72,41 +72,41 @@ const SubmitArticle: NextPage = () => {
     <Layout heading="Home" content="Homepage of the legal engineering guild.">
       <h1 className="text-3xl font-bold text-white">Submit your article</h1>
       <div className="mb-6">
-        <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Email Address</label>
+        <label className="mb-2 block text-sm font-medium text-gray-900 dark:text-gray-300">Email Address</label>
         <input
           onChange={(e) => setEmail(e.target.value)}
           type="text"
           id="base-input"
-          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
         />
-        <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Title</label>
+        <label className="mb-2 block text-sm font-medium text-gray-900 dark:text-gray-300">Title</label>
         <input
           onChange={(e) => setTitle(e.target.value)}
           type="text"
           id="base-input"
-          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
         />
 
-        <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Author</label>
+        <label className="mb-2 block text-sm font-medium text-gray-900 dark:text-gray-300">Author</label>
         <input
           onChange={(e) => setAuthor(e.target.value)}
           type="text"
           id="base-input"
-          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
         />
-        <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Link</label>
+        <label className="mb-2 block text-sm font-medium text-gray-900 dark:text-gray-300">Link</label>
         <input
           onChange={(e) => setLink(e.target.value)}
           type="text"
           id="base-input"
-          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
         />
-        <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Publication Date</label>
+        <label className="mb-2 block text-sm font-medium text-gray-900 dark:text-gray-300">Publication Date</label>
         <div className="relative">
-          <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+          <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
             <svg
               aria-hidden="true"
-              className="w-5 h-5 text-gray-500 dark:text-gray-400"
+              className="h-5 w-5 text-gray-500 dark:text-gray-400"
               fill="currentColor"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
@@ -123,26 +123,26 @@ const SubmitArticle: NextPage = () => {
             onChange={(e) => setDate(e.target.value)}
             datepicker-format="dd/mm/yyyy"
             type="text"
-            className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 pl-10 text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600  dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500 sm:text-sm"
             placeholder="DD/MM/YYYY"
           />
         </div>
-        <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Type</label>
+        <label className="mb-2 block text-sm font-medium text-gray-900 dark:text-gray-300">Type</label>
         <Multiselect tag={type} setSelectedTag={setselectedType} selectedTag={selectedType} />
         {/* <Multiselect type={tag} setType={setTag} /> */}
-        <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Topics/Tags</label>
+        <label className="mb-2 block text-sm font-medium text-gray-900 dark:text-gray-300">Topics/Tags</label>
         <Multiselect tag={tag} setSelectedTag={setSelectedTag} selectedTag={selectedTag} />
-        <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Notes</label>
+        <label className="mb-2 block text-sm font-medium text-gray-900 dark:text-gray-300">Notes</label>
         <input
           onChange={(e) => setNotes(e.target.value)}
           type="text"
           id="base-input"
-          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
         />
         <button
           onClick={onSubmit}
           type="button"
-          className="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+          className="mr-2 mb-2 rounded-lg bg-gray-800 px-5 py-2.5 text-sm font-medium text-white hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
         >
           Submit
         </button>

@@ -27,12 +27,12 @@ const Home: NextPage = () => {
 
   return (
     <Layout heading="Home" content="Homepage of the legal engineering guild.">
-      <div className="flex flex-col items-center justify-center h-screen">
-        <div className="flex flex-col space-y-5 w-[70vw]">
+      <div className="flex h-screen flex-col items-center justify-center">
+        <div className="flex w-[70vw] flex-col space-y-5">
           <Splash />
           <Link
             href="/join"
-            className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg glass text-black hover:bg-brand-50 rounded-b-full"
+            className="glass btn-xs btn rounded-b-full text-black hover:bg-brand-50 sm:btn-sm md:btn-md lg:btn-lg"
           >
             Join the Guild
           </Link>

@@ -6,8 +6,8 @@ import { Splash } from '~/lander'
 const Join: NextPage = () => {
   return (
     <Layout heading="Join" content="Homepage of the legal engineering guild.">
-      <div className="w-[100vw] flex flex-row items-center justify-between min-h-screen">
-        <div className="hidden lg:block w-1/2 p-20 flex-col align-center justify-center space-y-3">
+      <div className="flex min-h-screen w-[100vw] flex-row items-center justify-between">
+        <div className="hidden w-1/2 flex-col items-center justify-center space-y-3 p-20 lg:block">
           <Splash />
         </div>
         <JoinForm />

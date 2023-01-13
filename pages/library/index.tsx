@@ -5,18 +5,18 @@ import Link from 'next/link'
 const Library: NextPage = () => {
   return (
     <Layout heading="Library" content="The archives of the legal engineering guild.">
-      <div className="flex flex-col items-center justify-center h-screen">
+      <div className="flex h-screen flex-col items-center justify-center">
         <div className="flex space-x-4">
-          <div className="w-[200px] h-[80px] bg-gray-900 text-white px-8 py-4 rounded-md text-xl font-bold">
+          <div className="h-[80px] w-[200px] rounded-md bg-gray-900 px-8 py-4 text-xl font-bold text-white">
             <Link href="/library/collections">Collections</Link>
           </div>
-          <div className="w-[200px] h-[80px] bg-gray-900 text-white px-8 py-4 rounded-md text-xl font-bold">
+          <div className="h-[80px] w-[200px] rounded-md bg-gray-900 px-8 py-4 text-xl font-bold text-white">
             <Link href="/library/catalogue">Catalogue</Link>
           </div>
-          <div className="w-[200px] h-[80px] bg-gray-900 text-white px-8 py-4 rounded-md text-xl font-bold">
+          <div className="h-[80px] w-[200px] rounded-md bg-gray-900 px-8 py-4 text-xl font-bold text-white">
             <Link href="/library/submit-article">Submit your Article</Link>
           </div>
-          <div className="w-[200px] h-[80px] bg-gray-900 text-white px-8 py-4 rounded-md text-xl font-bold">
+          <div className="h-[80px] w-[200px] rounded-md bg-gray-900 px-8 py-4 text-xl font-bold text-white">
             <Link href="/library/submit-review">Submit your Review</Link>
           </div>
         </div>

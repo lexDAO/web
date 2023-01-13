@@ -16,23 +16,23 @@ export default function NotFound() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="flex h-screen flex-col bg-white lg:relative">
-        <div className="flex flex-grow flex-col">
-          <main className="flex flex-grow flex-col bg-white">
-            <div className="mx-auto flex w-full max-w-7xl flex-grow flex-col px-4 sm:px-6 lg:px-8">
-              <div className="flex-shrink-0 pt-10 sm:pt-16">
+        <div className="flex grow flex-col">
+          <main className="flex grow flex-col bg-white">
+            <div className="mx-auto flex w-full max-w-7xl grow flex-col px-4 sm:px-6 lg:px-8">
+              <div className="shrink-0 pt-10 sm:pt-16">
                 <Link href="/" className="inline-flex">
                   <span className="sr-only">LexDAO</span>
                   <Image className="h-12 w-auto" src={lexdao} alt="" />
                 </Link>
               </div>
-              <div className="my-auto flex-shrink-0 py-16 sm:py-32">
+              <div className="my-auto shrink-0 py-16 sm:py-32">
                 <p className="text-base font-semibold text-brand-600">404</p>
                 <h1 className="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">Page not found</h1>
                 <p className="mt-2 text-base text-zinc-500">We couldn’t find the page you’re looking for.</p>
                 <div className="mt-6">
                   <Link
                     href="/"
-                    className="text-base font-medium text-brand-600 hover:text-brand-500 flex flex-row space-x-2"
+                    className="flex flex-row space-x-2 text-base font-medium text-brand-600 hover:text-brand-500"
                   >
                     <p>Go back home</p>
                     <span aria-hidden="true"> &rarr;</span>
@@ -41,7 +41,7 @@ export default function NotFound() {
               </div>
             </div>
           </main>
-          <footer className="flex-shrink-0 bg-gray-50">
+          <footer className="shrink-0 bg-gray-50">
             <div className="mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
               <nav className="flex space-x-4">
                 <a
@@ -79,7 +79,7 @@ export default function NotFound() {
             </div>
           </footer>
         </div>
-        <div className="hidden lg:absolute lg:inset-y-0 lg:right-0 lg:block lg:w-1/2 overflow-hidden">
+        <div className="hidden overflow-hidden lg:absolute lg:inset-y-0 lg:right-0 lg:block lg:w-1/2">
           <Image className="absolute inset-0 h-full w-full object-cover" src={lostMan} alt="" />
         </div>
       </div>

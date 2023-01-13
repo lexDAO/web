@@ -58,19 +58,19 @@ const Multiselect = ({ tag, selectedTag, setSelectedTag }: any) => {
   return (
     <div className="autcomplete-wrapper">
       <div className="autcomplete">
-        <div className="w-full flex flex-col items-center mx-auto">
+        <div className="mx-auto flex w-full flex-col items-center">
           <div className="w-full">
-            <div className="flex flex-col items-center relative">
+            <div className="relative flex flex-col items-center">
               <div className="w-full ">
-                <div className="my-2 p-1 flex border border-gray-200 bg-white rounded ">
+                <div className="my-2 flex rounded border border-gray-200 bg-white p-1 ">
                   <div className="flex flex-auto flex-wrap">
                     {selectedItems.map((tag, index) => {
                       return (
                         <div
                           key={index}
-                          className="flex justify-center items-center m-1 font-medium py-1 px-2 bg-white rounded-full text-teal-700 bg-teal-100 border border-teal-300 "
+                          className="m-1 flex items-center justify-center rounded-full border border-teal-300 bg-teal-100 py-1 px-2 font-medium text-teal-700 "
                         >
-                          <div className="text-xs font-normal leading-none max-w-full flex-initial">{tag}</div>
+                          <div className="max-w-full flex-initial text-xs font-normal leading-none">{tag}</div>
                           <div className="flex flex-auto flex-row-reverse">
                             <div onClick={() => removeTag(tag)}>
                               <svg
@@ -83,7 +83,7 @@ const Multiselect = ({ tag, selectedTag, setSelectedTag }: any) => {
                                 strokeWidth="2"
                                 strokeLinecap="round"
                                 strokeLinejoin="round"
-                                className="feather feather-x cursor-pointer hover:text-teal-400 rounded-full w-4 h-4 ml-2"
+                                className="feather feather-x ml-2 h-4 w-4 cursor-pointer rounded-full hover:text-teal-400"
                               >
                                 <line x1="18" y1="6" x2="6" y2="18"></line>
                                 <line x1="6" y1="6" x2="18" y2="18"></line>
@@ -96,15 +96,15 @@ const Multiselect = ({ tag, selectedTag, setSelectedTag }: any) => {
                     <div className="flex-1">
                       <input
                         placeholder=""
-                        className="bg-transparent p-1 px-2 appearance-none outline-none h-full w-full text-gray-800"
+                        className="h-full w-full appearance-none bg-transparent p-1 px-2 text-gray-800 outline-none"
                       />
                     </div>
                   </div>
                   <div
-                    className="text-gray-300 w-8 py-1 pl-2 pr-1 border-l flex items-center border-gray-200"
+                    className="flex w-8 items-center border-l border-gray-200 py-1 pl-2 pr-1 text-gray-300"
                     onClick={toogleDropdown}
                   >
-                    <button className="cursor-pointer w-6 h-6 text-gray-600 outline-none focus:outline-none">
+                    <button className="h-6 w-6 cursor-pointer text-gray-600 outline-none focus:outline-none">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="100%"
@@ -115,7 +115,7 @@ const Multiselect = ({ tag, selectedTag, setSelectedTag }: any) => {
                         strokeWidth="2"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        className="feather feather-chevron-up w-4 h-4"
+                        className="feather feather-chevron-up h-4 w-4"
                       >
                         <polyline points="18 15 12 9 6 15"></polyline>
                       </svg>
