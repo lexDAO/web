@@ -4,6 +4,7 @@ import Image from 'next/image'
 
 import lostMan from '../public/images/lost.png'
 import lexdao from '../public/lexdao.jpeg'
+import { DISCORD_INVITE_URL, TWITTER_URL } from '~/constants'
 
 export default function NotFound() {
   return (
@@ -45,7 +46,7 @@ export default function NotFound() {
             <div className="mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
               <nav className="flex space-x-4">
                 <a
-                  href="https://discord.gg/gQDMhvDVWS"
+                  href={DISCORD_INVITE_URL}
                   target="_blank"
                   rel="noopenner noreferrer"
                   className="flex flex-row items-center gap-2 text-sm font-medium text-gray-500 hover:text-gray-600"
@@ -54,7 +55,7 @@ export default function NotFound() {
                 </a>
                 <span className="inline-block border-l border-gray-300" aria-hidden="true" />
                 <a
-                  href="https://twitter.com/lex_DAO"
+                  href={TWITTER_URL}
                   target="_blank"
                   rel="noopenner noreferrer"
                   className="text-sm font-medium text-gray-500 hover:text-gray-600"

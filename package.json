@@ -16,9 +16,7 @@
     "@kalidao/reality": "^0.0.5",
     "@rainbow-me/rainbowkit": "^0.7.0",
     "@rainbow-me/rainbowkit-siwe-next-auth": "0.1.4",
-    "@splinetool/react-spline": "^2.2.3",
-    "@splinetool/runtime": "^0.9.116",
-    "@tanstack/react-query": "^4.10.1",
+    "@tanstack/react-query": "^4.24.4",
     "axios": "^1.2.2",
     "daisyui": "^2.46.0",
     "ethers": "^5.7.1",
@@ -31,6 +29,7 @@
     "react-typical": "^0.1.3",
     "react-wrap-balancer": "^0.2.4",
     "siwe": "1.1.6",
+    "tailwind-merge": "^1.9.1",
     "wagmi": "^0.6.7"
   },
   "devDependencies": {

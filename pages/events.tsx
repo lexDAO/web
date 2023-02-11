@@ -1,63 +1,95 @@
-import type { NextPage } from 'next'
+import type { GetServerSideProps, InferGetServerSidePropsType, NextPage } from 'next'
 import Layout from '~/layout'
-import { useQuery } from 'wagmi'
-import { CalendarIcon, MapPinIcon } from '@heroicons/react/20/solid'
+import Image from 'next/image'
+import { CalendarIcon, MapPinIcon, UserCircleIcon } from '@heroicons/react/20/solid'
 import { EventImage } from '~/events'
+import { useGetDiscordEvents } from '~/events/useGetDiscordEvents'
+import { Spinner } from '@kalidao/reality'
+import Balancer from 'react-wrap-balancer'
+import { DISCORD_INVITE_URL } from '~/constants'
 
-const Events: NextPage = () => {
-  const { data, isLoading, isError } = useQuery(['calendar'], () =>
-    fetch(
-      `https://www.googleapis.com/calendar/v3/calendars/85e1f52ab922b8d38553616d0938a840024508f714884250023c41e208941ee3@group.calendar.google.com/events?key=${process.env.NEXT_PUBLIC_GOOGLE_API_KEY}`,
-      {
-        method: 'GET',
-      },
-    ).then((res) => res.json()),
-  )
+interface Event {
+  id: string
+  guild_id: string
+  channel_id: string
+  creator_id: string
+  name: string
+  description: string
+  image: string
+  scheduled_start_time: string
+  scheduled_end_time: string
+  privacy_level: number
+  status: number
+  entity_type: number
+  entity_id: string
+  entity_metadata: string
+  sku_ids: string[]
+  creator: {
+    id: string
+    username: string
+    display_name: string
+    avatar: string
+    avatar_decoration: string
+    discriminator: string
+    public_flags: number
+  }
+}
 
-  console.log('fetched', data)
+// server side render
+const getServerSideProps: GetServerSideProps = async () => {
+  const data = await useGetDiscordEvents()
 
+  // 404 if no data
+  if (!data) {
+    return {
+      notFound: true,
+    }
+  }
+
+  return {
+    props: {
+      data,
+    },
+  }
+}
+
+const Events: NextPage = ({ data }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
+  console.log('discord event', data)
   return (
     <Layout heading="Home" content="Homepage of the legal engineering guild.">
-      <div className="m-10 flex h-screen w-11/12 flex-row items-start justify-center">
-        <div className="flex flex-col items-center justify-start">
-          {!isLoading && !isError && !data?.error && data?.items?.length != 0 && (
-            <>
-              <h1 className="font-mono text-3xl font-bold">Events</h1>
-              <span className="divider" />
-            </>
-          )}
-          {!isLoading && !isError && data?.error ? (
-            // class for centering text
-            <div className="flex h-5/6 items-center justify-center">
-              <p className="font-mono text-4xl text-red-500">
-                <strong>Error:</strong> {data.error.message}
-              </p>
-            </div>
-          ) : data?.items?.length != 0 ? (
-            <ol className="mt-4 divide-y divide-gray-100 text-sm leading-6 sm:w-full lg:col-span-7 lg:w-6/12 xl:col-span-8">
-              {data?.items?.map((item: any) => (
-                <EventCard key={item.id} event={item} />
-              ))}
-            </ol>
-          ) : (
-            <div className="flex h-5/6 items-center justify-center">
-              <p className="font-mono text-4xl text-red-500">
-                <strong>Error:</strong> No events found.
-              </p>
-            </div>
-          )}
+      <div className="min-h-screen flex flex-col justify-start items-center mt-10">
+        {/* fix hydration issues */}
+        {data ? (
+          data?.length > 0 ? (
+            data?.map((event: Event) => <EventCard key={event.id} event={event} />)
+          ) : null
+        ) : (
+          <Spinner />
+        )}
+      </div>
+      <div className="bg-gradient-to-r from-brand-600 to-brand-900">
+        <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:px-8 lg:pt-24">
+          <h2 className="text-3xl font-bold tracking-tight text-white">
+            <Balancer>
+              Join us on our <a href={DISCORD_INVITE_URL}>Discord</a> server.
+            </Balancer>
+          </h2>
+          <p className="mt-4 max-w-3xl text-lg text-brand-50">
+            LexDAO is a community of legal engineers, lawyers, and technologists who are building the future of law.
+          </p>
+          <div className="mt-12 grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-16"></div>
         </div>
       </div>
     </Layout>
   )
 }
 
-const EventCard = ({ event }: any) => {
+const EventCard = ({ event }: { event: Event }) => {
   return (
     <li key={event.id} className="relative flex space-x-6 py-6 xl:static">
-      <EventImage title={event.summary} />
+      <EventImage id={event.id} title={event.name} image={event.image} />
       <div className="flex-auto">
-        <h3 className="pr-10 font-semibold text-gray-900 xl:pr-0">{event.summary}</h3>
+        <h3 className="pr-10 font-semibold text-gray-900 xl:pr-0">{event.name}</h3>
         <p className="pr-10 text-gray-500 xl:pr-0">{event.description}</p>
         <dl className="mt-2 flex flex-col text-gray-500 xl:flex-row">
           <div className="flex items-start space-x-3">
@@ -66,9 +98,9 @@ const EventCard = ({ event }: any) => {
               <CalendarIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
             </dt>
             <dd>
-              <time dateTime={event.datetime}>
-                {event?.start?.dateTime &&
-                  new Date(event.start.dateTime).toLocaleDateString('en-US', {
+              <time dateTime={event.scheduled_start_time}>
+                {event?.scheduled_start_time &&
+                  new Date(event.scheduled_start_time).toLocaleDateString('en-US', {
                     day: 'numeric',
                     weekday: 'short',
                     year: 'numeric',
@@ -85,11 +117,21 @@ const EventCard = ({ event }: any) => {
               <MapPinIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
             </dt>
             <dd>
-              {event.location == 'Discord' ? (
-                <a href="https://discord.gg/uwU85fRc">{event.location}</a>
-              ) : (
-                <p>{event.location}</p>
-              )}
+              <p className="text-gray-900">Discord</p>
+            </dd>
+            <dt className="mt-0.5">
+              <span className="sr-only">Host</span>
+              <Image
+                className="h-4 w-4 rounded-full xl:h-6 xl:w-6"
+                aria-hidden="true"
+                src={`https://cdn.discordapp.com/avatars/${event.creator_id}/${event.creator.avatar}.png?size=128`}
+                alt={event.creator.username}
+                width={20}
+                height={20}
+              />
+            </dt>
+            <dd>
+              <p className="text-gray-900">{event.creator.username}</p>
             </dd>
           </div>
         </dl>

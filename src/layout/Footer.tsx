@@ -68,7 +68,7 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="footer items-center bg-zinc-50 p-4 text-zinc-900">
+    <footer className="footer mt-auto items-center bg-zinc-50 p-4 text-zinc-900">
       <div className="grid-flow-col items-center">
         <div>
           <p>

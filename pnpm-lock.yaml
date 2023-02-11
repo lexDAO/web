@@ -6,10 +6,8 @@ specifiers:
   '@kalidao/reality': ^0.0.5
   '@rainbow-me/rainbowkit': ^0.7.0
   '@rainbow-me/rainbowkit-siwe-next-auth': 0.1.4
-  '@splinetool/react-spline': ^2.2.3
-  '@splinetool/runtime': ^0.9.116
   '@tailwindcss/forms': ^0.5.3
-  '@tanstack/react-query': ^4.10.1
+  '@tanstack/react-query': ^4.24.4
   '@types/lodash.merge': ^4.6.7
   '@types/node': 18.7.18
   '@types/react': 18.0.20
@@ -36,6 +34,7 @@ specifiers:
   react-typical: ^0.1.3
   react-wrap-balancer: ^0.2.4
   siwe: 1.1.6
+  tailwind-merge: ^1.9.1
   tailwindcss: ^3.1.8
   typescript: 4.8.3
   wagmi: ^0.6.7
@@ -46,9 +45,7 @@ dependencies:
   '@kalidao/reality': 0.0.5_biqbaboplfbrettd7655fr4n2y
   '@rainbow-me/rainbowkit': 0.7.4_cgsp2b65os7s6ecd3p3axxmpeu
   '@rainbow-me/rainbowkit-siwe-next-auth': 0.1.4_smt6dpxdn4dw6afbiengub5tve
-  '@splinetool/react-spline': 2.2.5_rdfu22co3q7hag3uhuc2ow7lqy
-  '@splinetool/runtime': 0.9.173
-  '@tanstack/react-query': 4.20.4_biqbaboplfbrettd7655fr4n2y
+  '@tanstack/react-query': 4.24.4_biqbaboplfbrettd7655fr4n2y
   axios: 1.2.2
   daisyui: 2.46.0_r4gnkvssmvyxmi2wmat5xbx36a
   ethers: 5.7.2
@@ -61,6 +58,7 @@ dependencies:
   react-typical: 0.1.3_biqbaboplfbrettd7655fr4n2y
   react-wrap-balancer: 0.2.4_react@18.2.0
   siwe: 1.1.6_ethers@5.7.2
+  tailwind-merge: 1.9.1
   wagmi: 0.6.8_n2cgurg25g7cgftjzlbstkeb2y
 
 devDependencies:
@@ -903,25 +901,6 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@splinetool/react-spline/2.2.5_rdfu22co3q7hag3uhuc2ow7lqy:
-    resolution: {integrity: sha512-eAD6+GteOT9S7Z3OdsT/6o6WNYk5NLx48zmHXathdNVdfW/P3npTxEGzEhiM+aMsf2+HbRZx0pX0WHt59HDjlg==}
-    peerDependencies:
-      '@splinetool/runtime': '*'
-      react: '>=17.0.0'
-      react-dom: '>=17.0.0'
-    dependencies:
-      '@splinetool/runtime': 0.9.173
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
-      react-merge-refs: 1.1.0
-    dev: false
-
-  /@splinetool/runtime/0.9.173:
-    resolution: {integrity: sha512-P1uR/NLa1cM5pxkuGVOFaSXOIu/J2dUfLwFcJBL8KHevmJHWOe+7kwFZ53YrpkAKlX20Lou6oUPgt6iWMp1M2w==}
-    dependencies:
-      on-change: 4.0.2
-    dev: false
-
   /@spruceid/siwe-parser/1.1.3:
     resolution: {integrity: sha512-oQ8PcwDqjGWJvLmvAF2yzd6iniiWxK0Qtz+Dw+gLD/W5zOQJiKIUXwslHOm8VB8OOOKW9vfR3dnPBhHaZDvRsw==}
     dependencies:
@@ -964,8 +943,8 @@ packages:
       tailwindcss: 3.2.4_postcss@8.4.20
     dev: true
 
-  /@tanstack/query-core/4.20.4:
-    resolution: {integrity: sha512-lhLtGVNJDsJ/DyZXrLzekDEywQqRVykgBqTmkv0La32a/RleILXy6JMLBb7UmS3QCatg/F/0N9/5b0i5j6IKcA==}
+  /@tanstack/query-core/4.24.4:
+    resolution: {integrity: sha512-9dqjv9eeB6VHN7lD3cLo16ZAjfjCsdXetSAD5+VyKqLUvcKTL0CklGQRJu+bWzdrS69R6Ea4UZo8obHYZnG6aA==}
     dev: false
 
   /@tanstack/query-persist-client-core/4.20.4:
@@ -982,19 +961,19 @@ packages:
       - '@tanstack/query-core'
     dev: false
 
-  /@tanstack/react-query-persist-client/4.20.4_l2azqzttlggxzjcfejyd3icfe4:
+  /@tanstack/react-query-persist-client/4.20.4_pbzrecrhgj7fe7hddoo6lp43hu:
     resolution: {integrity: sha512-fJvYdULQEa+PV7M3WzWNPWiP/VmWflyiISwIzu2/wC6TnsH7CzXwUwy5PvTl89AR26GR0/U5J6f+oS6JhLVJxQ==}
     peerDependencies:
       '@tanstack/react-query': 4.20.4
     dependencies:
       '@tanstack/query-persist-client-core': 4.20.4
-      '@tanstack/react-query': 4.20.4_biqbaboplfbrettd7655fr4n2y
+      '@tanstack/react-query': 4.24.4_biqbaboplfbrettd7655fr4n2y
     transitivePeerDependencies:
       - '@tanstack/query-core'
     dev: false
 
-  /@tanstack/react-query/4.20.4_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-SJRxx13k/csb9lXAJfycgVA1N/yU/h3bvRNWP0+aHMfMjmbyX82FdoAcckDBbOdEyAupvb0byelNHNeypCFSyA==}
+  /@tanstack/react-query/4.24.4_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-RpaS/3T/a3pHuZJbIAzAYRu+1nkp+/enr9hfRXDS/mojwx567UiMksoqW4wUFWlwIvWTXyhot2nbIipTKEg55Q==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
       react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
@@ -1005,7 +984,7 @@ packages:
       react-native:
         optional: true
     dependencies:
-      '@tanstack/query-core': 4.20.4
+      '@tanstack/query-core': 4.24.4
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       use-sync-external-store: 1.2.0_react@18.2.0
@@ -4166,11 +4145,6 @@ packages:
     engines: {node: ^10.13.0 || >=12.0.0}
     dev: false
 
-  /on-change/4.0.2:
-    resolution: {integrity: sha512-cMtCyuJmTx/bg2HCpHo3ZLeF7FZnBOapLqZHr2AlLeJ5Ul0Zu2mUJJz051Fdwu/Et2YW04ZD+TtU+gVy0ACNCA==}
-    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
-    dev: false
-
   /once/1.4.0:
     resolution: {integrity: sha512-lNaJgI+2Q5URQBkccEKHTQOPaXdUxnZZElQTZY0MFUAuaEqe1E+Nyvgdz/aIyNi6Z9MzO5dv1H8n58/GELp3+w==}
     dependencies:
@@ -4547,10 +4521,6 @@ packages:
       vfile: 5.3.6
     transitivePeerDependencies:
       - supports-color
-    dev: false
-
-  /react-merge-refs/1.1.0:
-    resolution: {integrity: sha512-alTKsjEL0dKH/ru1Iyn7vliS2QRcBp9zZPGoWxUOvRGWPUYgjo+V01is7p04It6KhgrzhJGnIj9GgX8W4bZoCQ==}
     dev: false
 
   /react-remove-scroll-bar/2.3.4_w5j4k42lgipnm43s3brx6h3c34:
@@ -5045,6 +5015,10 @@ packages:
       tslib: 2.4.1
     dev: true
 
+  /tailwind-merge/1.9.1:
+    resolution: {integrity: sha512-ED9MkiUHlmfh58EC1xHRqXcH1IQyRtmDP0AmXlugYkP2tvfu7ejtjFEHJLJt93mQ7ZJkcqSIgm9M394bq5vOJg==}
+    dev: false
+
   /tailwindcss/3.2.4_postcss@8.4.20:
     resolution: {integrity: sha512-AhwtHCKMtR71JgeYDaswmZXhPcW9iuI9Sp2LvZPo9upDZ7231ZJ7eA9RaURbhpXGVlrjX4cFNlB4ieTetEb7hQ==}
     engines: {node: '>=12.13.0'}
@@ -5356,8 +5330,8 @@ packages:
     dependencies:
       '@coinbase/wallet-sdk': 3.6.3
       '@tanstack/query-sync-storage-persister': 4.20.4
-      '@tanstack/react-query': 4.20.4_biqbaboplfbrettd7655fr4n2y
-      '@tanstack/react-query-persist-client': 4.20.4_l2azqzttlggxzjcfejyd3icfe4
+      '@tanstack/react-query': 4.24.4_biqbaboplfbrettd7655fr4n2y
+      '@tanstack/react-query-persist-client': 4.20.4_pbzrecrhgj7fe7hddoo6lp43hu
       '@wagmi/core': 0.5.8_k4r2eynlbxqovgtks655tfmyqa
       '@walletconnect/ethereum-provider': 1.8.0
       ethers: 5.7.2

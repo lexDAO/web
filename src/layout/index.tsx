@@ -12,7 +12,7 @@ export default function Layout({ heading, content, children }: LayoutProps) {
   const title = 'LexDAO - ' + heading
 
   return (
-    <>
+    <body className="flex flex-col min-h-screen">
       <Head>
         <title>{title}</title>
         <meta name="description" content={content} />
@@ -20,12 +20,10 @@ export default function Layout({ heading, content, children }: LayoutProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="min-h-screen w-screen">
-        <div className="space-between  align-center flex min-h-screen w-screen flex-col bg-white">
-          <Header />
-          {children}
-        </div>
+        <Header />
+        <div className="space-between align-center flex min-h-screen w-screen flex-col bg-white">{children}</div>
       </main>
       <Footer />
-    </>
+    </body>
   )
 }

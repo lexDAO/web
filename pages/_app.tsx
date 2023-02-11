@@ -28,8 +28,6 @@ const wagmiClient = createClient({
   provider,
 })
 
-const reactQueryClient = new QueryClient()
-
 const Disclaimer: DisclaimerComponent = ({ Text, Link }) => (
   <Text>
     By connecting your wallet, you agree to the <Link href="/terms">Terms of Service</Link> and acknowledge you have
@@ -40,6 +38,8 @@ const Disclaimer: DisclaimerComponent = ({ Text, Link }) => (
 const getSiweMessageOptions: GetSiweMessageOptions = () => ({
   statement: 'By signing this message you agree to our Terms of Service and Privacy Policy.',
 })
+
+const reactQueryClient = new QueryClient()
 
 function App({
   Component,
@@ -63,8 +63,9 @@ function App({
           >
             <QueryClientProvider client={reactQueryClient}>
               <NextNProgress color="#be93e4" />
+
+              <Component {...pageProps} />
             </QueryClientProvider>
-            <Component {...pageProps} />
           </RainbowKitProvider>
         </RainbowKitSiweNextAuthProvider>
       </SessionProvider>
