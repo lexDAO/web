@@ -3,7 +3,7 @@ import Layout from '~/layout'
 import Image from 'next/image'
 import { CalendarIcon, MapPinIcon, UserCircleIcon } from '@heroicons/react/20/solid'
 import { EventImage } from '~/events'
-import { useGetDiscordEvents } from '~/events/useGetDiscordEvents'
+import { getDiscordEvents, useGetDiscordEvents } from '~/events/useGetDiscordEvents'
 import { Spinner } from '@kalidao/reality'
 import Balancer from 'react-wrap-balancer'
 import { DISCORD_INVITE_URL } from '~/constants'
@@ -37,7 +37,7 @@ interface Event {
 
 // server side render
 const getServerSideProps: GetServerSideProps = async () => {
-  const data = await useGetDiscordEvents()
+  const data = await getDiscordEvents()
 
   // 404 if no data
   if (!data) {
