@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     if (req.method !== 'GET') {
       res.status(405).json({ statusCode: 405, message: 'Method Not Allowed' })
@@ -20,3 +20,5 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     res.status(500).json({ statusCode: 500, error: error })
   }
 }
+
+export default handler

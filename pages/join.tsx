@@ -11,17 +11,19 @@ const Join: NextPage = () => {
           <Splash />
         </div>
         {/* https://docs.google.com/forms/d/e/1FAIpQLScRY0mfYIoOIddLvWKBPBSyJRgYumRnx9_hgcXn22WBNP-Juw/viewform embed responsive google form */}
-        <iframe
-          src="https://docs.google.com/forms/d/e/1FAIpQLScRY0mfYIoOIddLvWKBPBSyJRgYumRnx9_hgcXn22WBNP-Juw/viewform?embedded=true"
-          width={window.innerWidth}
-          height="1000"
-          frameBorder="0"
-          marginHeight={0}
-          marginWidth={0}
-          className="w-full lg:w-1/2"
-        >
-          Loading…
-        </iframe>
+        {window ? (
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLScRY0mfYIoOIddLvWKBPBSyJRgYumRnx9_hgcXn22WBNP-Juw/viewform?embedded=true"
+            width={window.innerWidth}
+            height="1000"
+            frameBorder="0"
+            marginHeight={0}
+            marginWidth={0}
+            className="w-full lg:w-1/2"
+          >
+            Loading…
+          </iframe>
+        ) : null}
         {/* <JoinForm /> */}
       </div>
     </Layout>
