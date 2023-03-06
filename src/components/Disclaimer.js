@@ -10,7 +10,7 @@ function Disclaimer(props) {
       writing, all conversations and communications with DAO members which take
       place in any public or semi-public forum (e.g. Discord or Twitter) are not
       to be considered legal advice for any purpose. For explicit statement, no
-      individual DAO member is an agent of other DAO members or for LexDAO, LLC.
+      individual DAO member is an agent of other DAO members or for LexDAO.
     </Box>
   );
 }
