@@ -1,7 +1,7 @@
 import qs from 'qs'
 
 export const getApiUrl = (path: string) => {
-  return `${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:1337'}${path}`
+  return `${process.env.API_URL || 'http://localhost:1337'}${path}`
 }
 
 export const fetcher = async (path: string, urlParamsObject: any = {}, options: any = {}) => {
