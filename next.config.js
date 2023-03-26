@@ -4,7 +4,8 @@ const nextConfig = {
   swcMinify: true,
   // images config
   images: {
-    domains: ['cdn.discordapp.com'],
+    loader: "default",
+    domains: ['cdn.discordapp.com', "localhost", "api.lexdao.coop"],
   },
 }
 

@@ -15,6 +15,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       },
     })
     const data = await response.json()
+    console.log('serverless function data', data)
     res.status(200).json(data)
   } catch (error) {
     res.status(500).json({ statusCode: 500, error: error })

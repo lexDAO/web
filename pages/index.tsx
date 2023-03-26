@@ -1,72 +1,99 @@
-import type { NextPage } from 'next'
+import type { InferGetServerSidePropsType } from 'next'
 import Link from 'next/link'
-import { Splash, Features } from '~/lander'
-import Layout from '~/layout'
-import { BoltIcon, GlobeAltIcon, LightBulbIcon } from '@heroicons/react/20/solid'
-import Balancer from 'react-wrap-balancer'
+import { Splash, Features } from '@/src/lander'
+import Layout from '@/src/layout'
+import { fetcher } from '@/src/utils/api'
+import { cn, getRandomColor } from '@/lib/utils'
+import Stickyroll from '@stickyroll/react/stickyroll'
 
-const Home: NextPage = () => {
-  const features = [
-    {
-      name: 'Network',
-      description: 'Join LexDAO and get access to our network of people and resources.',
-      icon: GlobeAltIcon,
-    },
-    {
-      name: 'Innovate',
-      description:
-        'Impact legal processes and services by bringing traditional legal settlements on to the blockchain.',
-      icon: BoltIcon,
-    },
-    {
-      name: 'Grow',
-      description: 'Grow your knowledge base in a radically new and emerging space.',
-      icon: LightBulbIcon,
-    },
-  ]
+export const getServerSideProps = async () => {
+  try {
+    const data = await fetcher(`/homepage`, {
+      'populate[0]': 'features',
+      'populate[1]': 'features.image',
+      'populate[2]': 'cta',
+    })
+
+    return {
+      props: {
+        homepage: data?.data,
+      },
+    }
+  } catch (e) {
+    return {
+      notFound: true,
+    }
+  }
+}
+
+const Home = ({ homepage }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
+  const features = homepage?.attributes?.features
 
   return (
-    <Layout heading="Home" content="Homepage of the legal engineering guild.">
-      <div className="flex h-screen flex-col items-center justify-center">
-        <div className="flex w-[70vw] flex-col space-y-5">
-          <Splash />
-          <Link
-            href="/join"
-            className="glass btn-xs btn rounded-b-full text-black hover:bg-brand-50 sm:btn-sm md:btn-md lg:btn-lg"
-          >
-            Join the Guild
-          </Link>
+    <Layout heading="Home" content={homepage?.attributes?.Description}>
+      <Stickyroll pages={1} factor={2}>
+        <div className="h-screen grid">
+          <div className="flex flex-col space-y-5">
+            <Splash title={homepage?.attributes?.title} content={homepage?.attributes?.content} />
+          </div>
+          {homepage?.attributes?.cta?.map((cta: any) => {
+            const color = 'bg-' + getRandomColor()
+            if (cta.isExternal) {
+              return (
+                <a
+                  key={cta.id}
+                  target="_blank"
+                  rel="noopenner noreferrer"
+                  href={cta.url}
+                  className={cn(
+                    'border-black px-5 py-2 font-mono text-black shadow-lg h-fit flex justify-center content-center hover:scale-105 hover:transition uppercase',
+                    color,
+                  )}
+                >
+                  {cta.label} {cta?.icon}
+                </a>
+              )
+            }
+
+            return (
+              <Link
+                key={cta.id}
+                href={cta.url}
+                className={cn(
+                  'border-black px-5 py-2 w-screen font-mono text-black shadow-lg h-fit flex justify-center content-center text-xl sm:text-2xl md:text-5xl hover:scale-105 hover:transition uppercase',
+                  color,
+                )}
+              >
+                {cta.label} {cta?.icon}
+              </Link>
+            )
+          })}
         </div>
-      </div>
-      <Features />
-      {/* Gradient Feature Section */}
-      <div className="bg-gradient-to-r from-brand-600 to-brand-900">
-        <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:px-8 lg:pt-24">
-          <h2 className="text-3xl font-bold tracking-tight text-white">
-            <Balancer>Join us in securing rules and promises with code.</Balancer>
-          </h2>
-          <p className="mt-4 max-w-3xl text-lg text-brand-50">
-            LexDAO is a community of legal engineers, lawyers, and technologists who are building the future of law.
-          </p>
-          <div className="mt-12 grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-16">
-            {features.map((feature) => (
-              <div key={feature.name}>
-                <div>
-                  <span className="flex h-12 w-12 items-center justify-center rounded-md bg-white bg-opacity-10">
-                    <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
-                  </span>
-                </div>
-                <div className="mt-6">
-                  <h3 className="text-lg font-medium text-white">
-                    <Balancer>{feature.name}</Balancer>
-                  </h3>
-                  <p className="mt-2 text-base text-brand-50">{feature.description}</p>
-                </div>
-              </div>
-            ))}
+        <Features features={features ?? []} />
+        {/* Gradient Feature Section */}
+        <div className="bg-quaternary-500">
+          <div className="grid grid-cols-1 mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:px-8 lg:pt-24">
+            <div className="grid grid-cols-1 gap-4 items-center justify-items-center">
+              <h2 className="text-xl md:text-6xl font-serif font-extrabold tracking-tight text-black text-center">
+                Embrace the future of legal innovation
+              </h2>
+              <p className="max-w-3xl font-serif text-xl sm:text-2xl text-black text-center">
+                LexDAO is a cutting-edge, decentralized collective of forward-thinking lawyers, dedicated to shaping the
+                next generation of smart contracts. Join us on our mission to revolutionize the legal landscape through
+                the power of Ethereum and cyberpunk ethos.
+              </p>
+            </div>
+            <div className="grid justify-items-end">
+              <Link
+                href="/join"
+                className="btn-xs btn rounded-l-none rounded-r-full border border-b-4 border-r-4 border-black shadow-none  bg-secondary-500 px-5 py-2 font-mono text-black  hover:translate-x-2 hover:bg-secondary-300 focus:ring-1 focus:ring-secondary-700 sm:btn-sm md:btn-md lg:btn-lg"
+              >
+                Join
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
+      </Stickyroll>
     </Layout>
   )
 }

@@ -1,6 +1,6 @@
 export default function JoinForm() {
   return (
-    <form className="align-center absolute inset-y-0 right-0 flex min-h-screen w-full flex-col justify-center space-y-5 p-10 lg:w-1/2 lg:bg-zinc-50">
+    <form className="align-center inset-y-0 flex min-h-screen w-full flex-col justify-center space-y-5 px-10">
       <h2 className="text-2xl font-semibold">Your support matters.</h2>
       <p className="text-md font-medium">
         This will generate a NFT on Ethereum. It will allow you to access exclusive token-gated content and discussions.
@@ -14,7 +14,7 @@ export default function JoinForm() {
             type="text"
             name="name"
             id="name"
-            className="border-bottom-1 border-brand-200 focus:border-brand-600 focus:ring-2 focus:ring-brand-500"
+            className="border-bottom-1 border-primary-200 focus:border-primary-600 focus:ring-2 focus:ring-primary-500"
             autoFocus
           />
         </div>
@@ -25,7 +25,7 @@ export default function JoinForm() {
           <textarea
             name="why"
             id="name"
-            className="border-bottom-1 border-brand-200 focus:border-brand-600 focus:ring-2 focus:ring-brand-500"
+            className="border-bottom-1 border-primary-200 focus:border-primary-600 focus:ring-2 focus:ring-primary-500"
           />
         </div>
         <div className="flex flex-col gap-1">
@@ -40,7 +40,7 @@ export default function JoinForm() {
                 name="way"
                 value="capital"
                 aria-describedby="capital-helper-text"
-                className="h-4 w-4 border-gray-300 bg-gray-100 text-brand-600 focus:ring-2  focus:ring-brand-500"
+                className="h-4 w-4 border-gray-300 bg-gray-100 text-primary-600 focus:ring-2  focus:ring-primary-500"
               />
             </div>
             <div className="ml-2 flex flex-col text-sm">
@@ -59,7 +59,7 @@ export default function JoinForm() {
                 name="way"
                 value="sweat"
                 aria-describedby="sweat-helper-text"
-                className="h-4 w-4 border-gray-300 bg-gray-100 text-brand-600 focus:ring-2  focus:ring-brand-500"
+                className="h-4 w-4 border-gray-300 bg-gray-100 text-primary-600 focus:ring-2  focus:ring-primary-500"
               />
             </div>
             <div className="ml-2 flex flex-col text-sm">
@@ -73,7 +73,7 @@ export default function JoinForm() {
       </div>
       <button
         type="submit"
-        className="rounded-xl bg-brand-50 p-2 outline-none transition-transform duration-300 ease-in  hover:scale-105  hover:bg-brand-100  focus:ring-brand-200"
+        className="rounded-xl bg-primary-50 p-2 outline-none transition-transform duration-300 ease-in  hover:scale-105  hover:bg-primary-100  focus:ring-primary-200"
       >
         Submit.
       </button>

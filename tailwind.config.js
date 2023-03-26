@@ -8,31 +8,78 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // mala
-        brand: {
-          '50': '#bbb4e9',
-          '100': '#b7ace7',
-          '200': '#ab9ce2',
-          '300': '#9881da',
-          '400': '#7d55ce',
-          '500': '#6836ba',
-          '600': '#582c96',
-          '700': '#4e247b',
-          '800': '#3d1a5b',
-          '900': '#2d123f',
+        primary: {
+          50: "#e6f2ff",
+          100: "#b3d1ff",
+          200: "#80b0ff",
+          300: "#4d8fff",
+          400: "#1a6eff",
+          500: "#0055e6",
+          600: "#0044b3",
+          700: "#003380",
+          800: "#00224d",
+          900: "#00111a",
+       },
+secondary: {
+          50: "#e6ffe6",
+          100: "#b3ffb3",
+          200: "#80ff80",
+          300: "#4dff4d",
+          400: "#1aff1a",
+          500: "#00e600",
+          600: "#00b300",
+          700: "#008000",
+          800: "#004d00",
+          900: "#001a00",
+       },
+tertiary: {
+          50: "#ffe6f2",
+          100: "#ffb3d1",
+          200: "#ff80b0",
+          300: "#ff4d8f",
+          400: "#ff1a6e",
+          500: "#e60055",
+          600: "#b30044",
+          700: "#800033",
+          800: "#4d0022",
+          900: "#1a0011",
+       },
+quaternary: {
+          50: "#fff7e6",
+          100: "#ffefb3",
+          200: "#ffe780",
+          300: "#ffdf4d",
+          400: "#ffd71a",
+          500: "#ffc800",
+          600: "#b3a000",
+          700: "#807000",
+          800: "#4d4800",
+          900: "#1a2000",
+       },
       },
-
-      }
-    },
     fontFamily: {
-      serif: ['Playfair Display', 'serif'],
-      mono: ['DotGothic16', 'sans-serif'],
-      custom: ["Custom", "sans-serif"],
-    
+      serif:  ['IBM Plex Sans', 'sans-serif'],
+      mono: ['IBM Plex Mono', 'monospace'],
+    },
+    keyframes: {
+      "accordion-down": {
+        from: { height: 0 },
+        to: { height: "var(--radix-accordion-content-height)" },
+      },
+      "accordion-up": {
+        from: { height: "var(--radix-accordion-content-height)" },
+        to: { height: 0 },
+      },
+    },
+    animation: {
+      "accordion-down": "accordion-down 0.2s ease-out",
+      "accordion-up": "accordion-up 0.2s ease-out",
     },
   },
   plugins: [
+    require('@tailwindcss/typography'),
+    require("tailwindcss-animate"),
     require('@tailwindcss/forms'),
-    require("daisyui"),
   ],
+  }
 }

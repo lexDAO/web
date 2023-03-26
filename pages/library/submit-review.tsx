@@ -1,9 +1,10 @@
 import type { NextPage } from 'next'
-import Layout from '~/layout'
+import Layout from '@/src/layout'
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
 const SubmitReview: NextPage = () => {
+  return null // build error
   const [email, setEmail] = useState('')
   const [array, setArray] = useState([])
   const [qualifications, setQualifications] = useState('')

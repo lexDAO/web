@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
-import { FAQs } from '~/guilds'
-import Layout from '~/layout'
+import { FAQs } from '@/src/guilds'
+import Layout from '@/src/layout'
 import { BriefcaseIcon, BuildingOffice2Icon, Cog8ToothIcon } from '@heroicons/react/20/solid'
 
 const Guilds: NextPage = () => {
@@ -42,7 +42,7 @@ const Guilds: NextPage = () => {
                 href={project.href}
                 className="flex flex-col items-center justify-center space-y-4 rounded-lg bg-white p-4 text-center shadow-xl transition duration-300 ease-in-out hover:scale-105"
               >
-                <project.icon className="h-12 w-12 text-brand-600" aria-hidden="true" />
+                <project.icon className="h-12 w-12 text-primary-600" aria-hidden="true" />
                 <div className="space-y-2">
                   <h3 className="text-lg font-medium text-gray-900">{project.name}</h3>
                   <p className="text-base text-gray-500">{project.description}</p>

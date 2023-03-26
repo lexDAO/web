@@ -1,8 +1,9 @@
 import type { NextPage } from 'next'
-import Layout from '~/layout'
+import Layout from '@/src/layout'
 import Link from 'next/link'
 
 const Library: NextPage = () => {
+  return null // build error
   return (
     <Layout heading="Library" content="The archives of the legal engineering guild.">
       <div className="flex h-screen flex-col items-center justify-center">

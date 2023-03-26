@@ -1,12 +1,12 @@
 import type { GetServerSideProps, InferGetServerSidePropsType, NextPage } from 'next'
-import Layout from '~/layout'
+import Layout from '@/src/layout'
 import Image from 'next/image'
 import { CalendarIcon, MapPinIcon, UserCircleIcon } from '@heroicons/react/20/solid'
-import { EventImage } from '~/events'
-import { getDiscordEvents, useGetDiscordEvents } from '~/events/useGetDiscordEvents'
+import { EventImage } from '@/src/events'
+import { getDiscordEvents, useGetDiscordEvents } from '@/src/events/useGetDiscordEvents'
 import { Spinner } from '@kalidao/reality'
 import Balancer from 'react-wrap-balancer'
-import { DISCORD_INVITE_URL } from '~/constants'
+import { DISCORD_INVITE_URL } from '@/src/constants'
 
 interface Event {
   id: string
@@ -37,7 +37,15 @@ interface Event {
 
 // server side render
 const getServerSideProps: GetServerSideProps = async () => {
-  const data = await getDiscordEvents()
+  const response = await fetch(`https://discord.com/api/v10/guilds/682960432272506907/scheduled-events`, {
+    method: 'GET',
+    headers: {
+      Authorization: `Bot ${process.env.DISCORD_BOT_TOKEN}`,
+      'Content-Type': 'application/json',
+    },
+  })
+  console.log('response', response)
+  const data = await response.json()
 
   // 404 if no data
   if (!data) {
@@ -46,35 +54,37 @@ const getServerSideProps: GetServerSideProps = async () => {
     }
   }
 
+  console.log('data', data)
+
   return {
     props: {
-      data,
+      events: data,
     },
   }
 }
 
-const Events: NextPage = ({ data }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
-  console.log('discord event', data)
+const Events: NextPage = ({ events }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
+  console.log('discord event', events)
   return (
     <Layout heading="Home" content="Homepage of the legal engineering guild.">
       <div className="min-h-screen flex flex-col justify-start items-center mt-10">
         {/* fix hydration issues */}
-        {data ? (
-          data?.length > 0 ? (
-            data?.map((event: Event) => <EventCard key={event.id} event={event} />)
+        {events ? (
+          events?.length > 0 ? (
+            events?.map((event: Event) => <EventCard key={event.id} event={event} />)
           ) : null
         ) : (
           <Spinner />
         )}
       </div>
-      <div className="bg-gradient-to-r from-brand-600 to-brand-900">
+      <div className="bg-gradient-to-r from-primary-600 to-primary-900">
         <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:px-8 lg:pt-24">
           <h2 className="text-3xl font-bold tracking-tight text-white">
             <Balancer>
               Join us on our <a href={DISCORD_INVITE_URL}>Discord</a> server.
             </Balancer>
           </h2>
-          <p className="mt-4 max-w-3xl text-lg text-brand-50">
+          <p className="mt-4 max-w-3xl text-lg text-primary-50">
             LexDAO is a community of legal engineers, lawyers, and technologists who are building the future of law.
           </p>
           <div className="mt-12 grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-16"></div>

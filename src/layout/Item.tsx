@@ -9,7 +9,7 @@ type Props = {
 
 export default function Home({ link, label, isExternal, isActive }: Props) {
   const linkStyle =
-    'px-3 text-white py-1 hover:bg-brand-800  hover:focus:bg-brand-800 hover:text-white text-center text-xl font-bold font-mono '
+    'px-3 text-white py-1 hover:bg-primary-800  hover:focus:bg-primary-800 hover:text-white text-center text-xl font-bold font-mono '
 
   if (isExternal === true)
     return (
@@ -19,7 +19,7 @@ export default function Home({ link, label, isExternal, isActive }: Props) {
     )
   if (isActive === true)
     return (
-      <Link href={link} className={linkStyle + 'bg-brand-500 rounded text-white'}>
+      <Link href={link} className={linkStyle + 'bg-primary-500 rounded text-white'}>
         {label}
       </Link>
     )

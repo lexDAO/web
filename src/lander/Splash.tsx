@@ -1,32 +1,38 @@
 import Typical from 'react-typical'
-import Balancer from 'react-wrap-balancer'
+import { useIsMounted } from '@/src/hooks/useIsMounted'
+import { useMemo } from 'react'
 
-export const Splash = () => {
+export const Splash = ({ title, content }: { title: string; content: string }) => {
+  const isMounted = useIsMounted()
+
+  const steps =
+    useMemo(() => {
+      if (!content) return []
+      const words = content.split(' ')
+      let s: any[] = []
+      for (let i = 0; i < words.length; i++) {
+        // add the last words to the steps array
+        if (i === 0) {
+          s = [...s, words[i], 1000]
+        } else {
+          // add the last word to the steps array
+          const lastWord = words.slice(0, i + 1).join(' ')
+          s = [...s, lastWord, 500]
+        }
+      }
+      return s
+    }, [content]) || []
+
+  if (!isMounted) return null
+  console.log('steps', steps)
   return (
     <>
-      <h1 className="font-serif text-6xl font-extrabold text-zinc-800 md:text-9xl">
-        <Balancer>LexDAO</Balancer>
+      <h1 className="animate-in slide-in-from-top-30 font-serif text-5xl  uppercase font-blacksub pixel-antialiased overline decoration-from-font indent-5 decoration-quaternary-500 text-white tracking-widest leading-relaxed">
+        {title}
       </h1>
-      <p className="font-mono text-xl md:text-5xl">
-        <Balancer>
-          <Typical
-            steps={[
-              'Building',
-              1000,
-              'Building the',
-              500,
-              'Building the next',
-              500,
-              'Building the next generation',
-              500,
-              'Building the next generation of',
-              500,
-              'Building the next generation of contracts',
-            ]}
-            wrapper="p"
-          />
-        </Balancer>
-      </p>
+      <div className="font-mono indent-5 text-white text-2xl md:text-5xl">
+        {steps.length > 0 ? <Typical steps={steps} wrapper="p" /> : null}
+      </div>
     </>
   )
 }

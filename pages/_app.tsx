@@ -1,4 +1,4 @@
-import '@design/globals.css'
+import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 import { Session } from 'next-auth'
 import { SessionProvider } from 'next-auth/react'
@@ -7,10 +7,11 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { chain, configureChains, createClient, WagmiConfig } from 'wagmi'
 import { alchemyProvider } from 'wagmi/providers/alchemy'
 import { publicProvider } from 'wagmi/providers/public'
-import '@rainbow-me/rainbowkit/styles.css'
-import { getDefaultWallets, RainbowKitProvider, DisclaimerComponent, lightTheme } from '@rainbow-me/rainbowkit'
+import { getDefaultWallets, RainbowKitProvider, DisclaimerComponent } from '@rainbow-me/rainbowkit'
 import { RainbowKitSiweNextAuthProvider, GetSiweMessageOptions } from '@rainbow-me/rainbowkit-siwe-next-auth'
-import { rainbowTheme } from '~/utils/'
+import { rainbowTheme } from '@/lib/rainbow'
+
+import '@rainbow-me/rainbowkit/styles.css'
 
 const { chains, provider } = configureChains(
   [chain.mainnet],
@@ -63,7 +64,6 @@ function App({
           >
             <QueryClientProvider client={reactQueryClient}>
               <NextNProgress color="#be93e4" />
-
               <Component {...pageProps} />
             </QueryClientProvider>
           </RainbowKitProvider>
