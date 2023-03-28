@@ -21,7 +21,7 @@ function Footer() {
           />
         </Link>
         <Link
-          href="https://discord.gg/QA75Zw4VTZ"
+          href="http://lexdao.chat"
           target="_blank"
           rel="noopener noreferrer"
         >
