@@ -4,6 +4,7 @@ import { NavigationMenu, NavigationMenuLink, NavigationMenuList } from '@/compon
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from '@/components/ui/dropdown-menu'
 import { Icons } from '@/components/ui/icons'
 import { cn } from '@/lib/utils'
+import { siteConfig } from '@/config/siteConfig'
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -24,9 +25,17 @@ export function Header() {
         orientation="vertical"
       >
         <NavigationMenuList>
-          <ListItem title="Home" href="/" className="rounded-l-full" />
-          <ListItem title="Join" href="/join" />
-          <ListItem title="Events" href="/events" className="rounded-r-full" />
+          {siteConfig.mainNav.map((item, index) => {
+            return (
+              <ListItem
+                key={index}
+                title={item.label}
+                className="rounded-r-full"
+                href={item.href}
+                isExternal={item.isExternal}
+              />
+            )
+          })}
         </NavigationMenuList>
       </NavigationMenu>
       <DropdownMenu>
@@ -34,38 +43,66 @@ export function Header() {
           <Icons.ellipsis />
         </DropdownMenuTrigger>
         <DropdownMenuContent className="fixed top-5 right-1 z-50   border-l-2 border-t-2 border-b-8 border-r-8 border-black shadow-none bg-white">
-          <DropdownMenuItem className="px-5 py-2 transition-colors transition-translate duration-100 hover:ease-in hover:scale-110 hover:text-tertiary-500 focus:text-tertiary-600 focus:ease-out focus:scale-90">
-            <Link href="/">Home</Link>
-          </DropdownMenuItem>
-          <DropdownMenuItem className="px-5 py-2 transition-colors transition-translate duration-100 hover:ease-in hover:scale-110 hover:text-tertiary-500 focus:text-tertiary-600 focus:ease-out focus:scale-90">
-            <Link href="/join">Join</Link>
-          </DropdownMenuItem>
-          <DropdownMenuItem className="px-5 py-2 transition-colors transition-translate duration-100 hover:ease-in hover:scale-110 hover:text-tertiary-500 focus:text-tertiary-600 focus:ease-out focus:scale-90">
-            <Link href="/events">Events</Link>
-          </DropdownMenuItem>
+          {siteConfig.mainNav.map((item, index) => {
+            return (
+              <DropdownMenuItem
+                key={index}
+                className="px-5 py-2 transition-colors transition-translate duration-100 hover:ease-in hover:scale-110 hover:text-tertiary-500 focus:text-tertiary-600 focus:ease-out focus:scale-90"
+              >
+                {item.isExternal ? (
+                  <a href={item.href} target="_blank" rel="noopener noreferrer">
+                    {item.label}
+                  </a>
+                ) : (
+                  <Link href={item.href}>{item.label}</Link>
+                )}
+              </DropdownMenuItem>
+            )
+          })}
         </DropdownMenuContent>
       </DropdownMenu>
     </div>
   )
 }
 
-const ListItem = React.forwardRef<React.ElementRef<'a'>, React.ComponentPropsWithoutRef<'a'>>(
-  ({ className, title, children, ...props }, ref) => {
+type ListItemProps = {
+  className?: string
+  title: string
+  isExternal?: boolean
+} & React.ComponentPropsWithoutRef<'a'>
+
+const ListItem = React.forwardRef<React.ElementRef<'a'>, ListItemProps>(
+  ({ className, title, isExternal = false, ...props }, ref) => {
     return (
       <li className="inline-flex items-center justify-center">
         <NavigationMenuLink asChild>
-          <Link
-            ref={ref}
-            href={props.href || ''}
-            className={cn(
-              'inline select-none p-3 leading-none no-underline outline-none transition-colors transition-translate duration-100 hover:ease-in hover:scale-110 hover:text-tertiary-500 focus:text-tertiary-600 focus:ease-out focus:scale-90',
-              className,
-            )}
-            {...props}
-          >
-            <div className="text-sm font-medium leading-none">{title}</div>
-            <p className="text-sm leading-snug text-black">{children}</p>
-          </Link>
+          {isExternal ? (
+            <a
+              ref={ref}
+              href={props.href || ''}
+              className={cn(
+                'inline select-none p-3 leading-none no-underline outline-none transition-colors transition-translate duration-100 hover:ease-in hover:scale-110 hover:text-tertiary-500 focus:text-tertiary-600 focus:ease-out focus:scale-90',
+                className,
+              )}
+              {...props}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="text-sm font-medium leading-none">{title}</div>
+            </a>
+          ) : (
+            <Link
+              ref={ref}
+              href={props.href || ''}
+              className={cn(
+                'inline select-none p-3 leading-none no-underline outline-none transition-colors transition-translate duration-100 hover:ease-in hover:scale-110 hover:text-tertiary-500 focus:text-tertiary-600 focus:ease-out focus:scale-90',
+                className,
+              )}
+              {...props}
+            >
+              <div className="text-sm font-medium leading-none">{title}</div>
+            </Link>
+          )}
         </NavigationMenuLink>
       </li>
     )

@@ -14,7 +14,7 @@ export const Features = ({
   }[]
 }) => {
   return (
-    <div className="h-screen flex flex-col space-y-10 items-center justify-center mb-20">
+    <div className="min-h-screen px-2 flex flex-col space-y-10 items-center justify-center mb-20">
       {features?.map((feature) => {
         return (
           <div key={feature.id} className={cn('z-10  text-black', 'w-full md:w-[60vw] flex flex-row justify-between')}>
