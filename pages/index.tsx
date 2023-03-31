@@ -85,12 +85,14 @@ const Home = ({ homepage }: InferGetServerSidePropsType<typeof getServerSideProp
             </p>
           </div>
           <div className="grid justify-items-end">
-            <Link
-              href="/join"
+            <a
+              target="_blank"
+              rel="noopenner noreferrer"
+              href="https://lexdao.substack.com/p/how-do-you-join-lex-dao"
               className="btn-xs btn rounded-l-none rounded-r-full border border-b-4 border-r-4 border-black shadow-none  bg-secondary-500 px-5 py-2 font-mono text-black  hover:translate-x-2 hover:bg-secondary-300 focus:ring-1 focus:ring-secondary-700 sm:btn-sm md:btn-md lg:btn-lg"
             >
               Join
-            </Link>
+            </a>
           </div>
         </div>
       </div>

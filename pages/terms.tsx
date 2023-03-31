@@ -10,7 +10,7 @@ export const getServerSideProps = async () => {
 
     return {
       props: {
-        article: data?.data,
+        article: data?.data?.attributes,
       },
     }
   } catch (e) {
@@ -22,18 +22,16 @@ export const getServerSideProps = async () => {
 
 const Terms = ({ article }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
   return (
-    <Layout heading="Terms of Use" content="Homepage of the legal engineering guild.">
-      <div className="min-h-screen px-10">
-        <h1 className="lg:prose-2xl prose-zinc prose-lg prose font-mono font-extrabold">
-          {article?.attributes?.Title}
-        </h1>
-        <ReactMarkdown className="lg:prose-xl prose-zinc prose-sm prose font-mono">
-          {article?.attributes?.Content}
-        </ReactMarkdown>
+    <Layout heading={article?.title} content={article?.content}>
+      <div className="flex flex-col min-h-screen px-10 mt-20 bg-white rounded-t-xl">
+        <h1 className="lg:text-2xl prose-zinc prose-lg prose font-mono font-extrabold mt-2">{article?.title}</h1>
+        <span className="bg-zinc-100 h-[1px] w-full my-2" role="separator"></span>
+        <ReactMarkdown className="lg:text-xl text-zinc-900 prose-sm prose font-mono">{article?.content}</ReactMarkdown>
         <div className="divider bg-slate-900"></div>
-        <p className="prose-sm prose-zinc prose font-mono">
-          Last revised {prettyShortDate(article?.attributes?.updatedAt)}
-        </p>
+        <div className="w-full h-1 bg-slate-900"></div>
+        <div className="flex flex-row justify-start items-center">
+          <p className="prose-sm prose-zinc prose font-mono">Last revised {prettyShortDate(article?.updatedAt)}</p>
+        </div>
       </div>
     </Layout>
   )
