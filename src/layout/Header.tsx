@@ -47,7 +47,7 @@ export function Header() {
             return (
               <DropdownMenuItem
                 key={index}
-                className="px-5 py-2 transition-colors transition-translate duration-100 hover:ease-in hover:scale-110 hover:text-tertiary-500 focus:text-tertiary-600 focus:ease-out focus:scale-90"
+                className="px-5 py-2 transition-colors transition-translate duration-100 hover:ease-in hover:scale-110 hover:text-primary-500 focus:text-primary-600 focus:ease-out focus:scale-90"
               >
                 {item.isExternal ? (
                   <a href={item.href} target="_blank" rel="noopener noreferrer">
@@ -81,7 +81,7 @@ const ListItem = React.forwardRef<React.ElementRef<'a'>, ListItemProps>(
               ref={ref}
               href={props.href || ''}
               className={cn(
-                'inline select-none p-3 leading-none no-underline outline-none transition-colors transition-translate duration-100 hover:ease-in hover:scale-110 hover:text-tertiary-500 focus:text-tertiary-600 focus:ease-out focus:scale-90',
+                'inline select-none p-3 leading-none no-underline outline-none transition-colors transition-translate duration-100 hover:ease-in hover:scale-110 hover:text-primary-500 focus:text-primary-600 focus:ease-out focus:scale-90',
                 className,
               )}
               {...props}
@@ -95,7 +95,7 @@ const ListItem = React.forwardRef<React.ElementRef<'a'>, ListItemProps>(
               ref={ref}
               href={props.href || ''}
               className={cn(
-                'inline select-none p-3 leading-none no-underline outline-none transition-colors transition-translate duration-100 hover:ease-in hover:scale-110 hover:text-tertiary-500 focus:text-tertiary-600 focus:ease-out focus:scale-90',
+                'inline select-none p-3 leading-none no-underline outline-none transition-colors transition-translate duration-100 hover:ease-in hover:scale-110 hover:text-primary-500 focus:text-primary-600 focus:ease-out focus:scale-90',
                 className,
               )}
               {...props}

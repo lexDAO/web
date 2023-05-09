@@ -1,10 +1,9 @@
 import type { InferGetServerSidePropsType } from 'next'
-import { GetServerSideProps, GetServerSidePropsContext } from 'next'
+import { GetServerSidePropsContext } from 'next'
 import Layout from '@/src/layout'
 import { fetcher } from '@/src/utils/api'
 import ReactMarkdown from 'react-markdown'
 import { prettyShortDate } from '@/src/utils/time'
-import { Separator } from '@/components/ui/separator'
 
 type Data = {
   id: string
@@ -61,7 +60,6 @@ export const getServerSideProps = async (context: GetServerSidePropsContext) => 
 }
 
 const Article = ({ article }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
-  console.log('article', article)
   return (
     <Layout heading={article?.title} content={article?.content}>
       <div className="flex flex-col min-h-screen px-10 mt-20 bg-white rounded-t-xl">

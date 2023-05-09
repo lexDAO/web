@@ -28,7 +28,7 @@ export const Features = ({
                     target="_blank"
                     rel="nooppener noreferrer"
                     className={cn(
-                      'uppercase rounded-lg border-4  border-black px-5 py-2 font-mono tracking-widest font-semibold shadow-none hover:border-b-2 hover:border-r-2 hover:shadow-sm',
+                      'text-sm text-ellipsis uppercase rounded-lg border-4 border-black px-3 py-1 font-mono tracking-widest font-semibold shadow-none hover:border-b-2 hover:border-r-2 hover:shadow-sm overflow-hidden',
                     )}
                   >
                     {feature.cta}

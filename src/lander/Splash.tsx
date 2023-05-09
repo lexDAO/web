@@ -24,13 +24,13 @@ export const Splash = ({ title, content }: { title: string; content: string }) =
     }, [content]) || []
 
   if (!isMounted) return null
-  console.log('steps', steps)
+
   return (
     <>
-      <h1 className="animate-in slide-in-from-top-30 font-serif text-5xl  uppercase font-blacksub pixel-antialiased overline decoration-from-font indent-5 decoration-quaternary-500 text-white tracking-widest leading-relaxed">
+      <h1 className="animate-in slide-in-from-top-30 font-serif text-5xl  uppercase font-blacksub pixel-antialiased overline decoration-from-font indent-5 decoration-primary-500 text-white tracking-widest leading-relaxed">
         {title}
       </h1>
-      <div className="font-mono indent-5 text-white text-2xl md:text-5xl">
+      <div className="font-mono indent-5 text-white text-2xl md:text-5xl text-center">
         {steps.length > 0 ? <Typical steps={steps} wrapper="p" /> : null}
       </div>
     </>
