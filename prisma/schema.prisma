@@ -1,0 +1,25 @@
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider     = "mysql"
+    url          = env("DATABASE_URL")
+    relationMode = "prisma"
+}
+
+model Token {
+    id          Int       @id @default(autoincrement())
+    name        String
+    symbol      String
+    image       String
+
+    yes         Int       @default(0)
+    no          Int       @default(0)
+}
+
+model User {
+    id          Int       @id @default(autoincrement())
+    address     String    @unique
+    son_score   Int       @default(0)
+}

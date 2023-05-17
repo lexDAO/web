@@ -11,3 +11,7 @@ export function getRandomColor() {
 
   return colors[Math.floor(Math.random() * colors.length)] + '-500'
 }
+
+export const truncateAddress = (address: string) => {
+  return address.slice(0, 6) + '...' + address.slice(-4)
+}

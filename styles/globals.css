@@ -2,6 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  cursor: url('/cursor.cur'), auto;
+}
 
+/* cursor on focus */
+*:focus {
+  outline: none;
+}
 
+.bleeding-noise-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
   
+.dynamic-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+  
+
+.neon-effect {
+  text-shadow:
+    0 0 8px #C0C040
+    0 0 10px #C0C040;
+  animation: neonGlow 1.5s ease-in-out infinite alternate;
+}
+
+/* uses lex-green */
+@keyframes neonGlow {
+  from {
+    text-shadow:
+      0 0 5px #C0C040,
+      0 0 10px #C0C040;
+     
+  }
+  to {
+    text-shadow:
+      0 0 8px #C0C040,
+      0 0 15px #C0C040;
+  }
+}

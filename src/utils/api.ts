@@ -16,11 +16,9 @@ export const fetcher = async (path: string, urlParamsObject: any = {}, options: 
   const queryString = qs.stringify(urlParamsObject)
   const requestUrl = `${getApiUrl(`/api${path}${queryString ? `?${queryString}` : ''}`)}`
 
-  console.log('requestUrl', requestUrl)
   const response = await fetch(requestUrl, mergedOptions)
 
   if (!response.ok) {
-    console.error('Error', response.statusText)
     throw new Error(`An error occured please try again`)
   }
 
